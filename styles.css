@@ -1,0 +1,1726 @@
+/* ==========================================================================
+   Design System & Tokens
+   ========================================================================== */
+:root {
+    /* Color Palette - Premium Dark Theme */
+    --bg-color: #0b0d17;
+    --bg-color-rgb: 11, 13, 23;
+    --surface-color: #151828;
+    --surface-border: rgba(255, 255, 255, 0.08);
+
+    /* Vibrant Accents */
+    --accent-primary: #00d4ff;
+    /* Cyan/Light Blue */
+    --accent-secondary: #0056e0;
+    /* Deep Blue */
+    --accent-glow: rgba(0, 212, 255, 0.5);
+
+    /* Typography */
+    --text-main: #f3f4f6;
+    --text-muted: #9ca3af;
+
+    /* Fonts */
+    --font-heading: 'Outfit', sans-serif;
+    --font-body: 'Inter', sans-serif;
+
+    /* Effects */
+    --glass-bg: rgba(21, 24, 40, 0.6);
+    --glass-border: 1px solid rgba(255, 255, 255, 0.1);
+    --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+
+    /* Transitions */
+    --transition-fast: 0.2s ease;
+    --transition-smooth: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ==========================================================================
+   Global Reset & Base Styles
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color var(--transition-fast);
+}
+
+ul {
+    list-style: none;
+}
+
+/* Utilities */
+.text-gradient {
+    background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 30px;
+    /* Pill shape */
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all var(--transition-smooth);
+    border: none;
+    text-align: center;
+}
+
+.btn-solid-white {
+    background: #ffffff;
+    color: #000000;
+}
+
+.btn-solid-white:hover {
+    background: #e6e6e6;
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--text-main);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.btn-outline:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.8);
+    transform: translateY(-2px);
+}
+
+.btn-large {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+}
+
+.btn-full {
+    width: 100%;
+}
+
+/* ==========================================================================
+   Navigation
+   ========================================================================== */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: var(--glass-border);
+    transition: all var(--transition-smooth);
+}
+
+.nav-container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 1rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.logo-img {
+    height: 50px;
+    width: auto;
+    display: block;
+}
+
+.logo-text {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #4ade80;
+    letter-spacing: -1px;
+    font-family: var(--font-heading);
+    margin-right: 1rem;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.nav-links a:not(.btn) {
+    font-weight: 500;
+    color: #e5e7eb;
+    font-size: 0.95rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.dropdown-icon {
+    width: 16px;
+    height: 16px;
+    opacity: 0.7;
+    transition: transform var(--transition-fast);
+}
+
+.dropdown {
+    position: relative;
+    padding-bottom: 1rem; /* Increase hover area to mega menu */
+    margin-bottom: -1rem; /* Counteract padding so layout doesn't break */
+}
+
+.dropdown:hover .dropdown-icon {
+    transform: rotate(180deg);
+}
+
+.mega-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #1e1f24; /* Dark gray similar to image */
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: none; /* hidden by default */
+    gap: 2rem;
+    min-width: 550px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+    z-index: 100;
+}
+
+/* Ensure other links don't inherit mega menu a tag styles */
+.dropdown:hover .mega-menu {
+    display: flex;
+}
+
+.mega-column {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex: 1;
+}
+
+.mega-title {
+    font-size: 0.75rem;
+    color: #9ca3af;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    margin-bottom: 0.5rem;
+}
+
+.mega-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    text-decoration: none !important;
+    transition: background 0.2s;
+    padding: 0.75rem;
+    border-radius: 8px;
+}
+
+.mega-item:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.mega-item::after {
+    display: none !important; /* Overriding the underline hover effect for nav-links a */
+}
+
+.mega-icon {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #e5e7eb;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    padding: 6px;
+    flex-shrink: 0;
+}
+
+.mega-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+}
+
+.mega-item-title {
+    color: #f3f4f6;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.mega-item-desc {
+    color: #9ca3af;
+    font-size: 0.8rem;
+    line-height: 1.3;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.discord-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #e5e7eb;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color var(--transition-fast);
+}
+
+.discord-link:hover {
+    color: #fff;
+}
+
+.separator {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.theme-toggle {
+    background: transparent;
+    border: none;
+    color: #e5e7eb;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: background var(--transition-fast), color var(--transition-fast);
+}
+
+.theme-toggle:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+.btn-client-space {
+    background: #fff;
+    color: #000;
+    font-weight: 700;
+    font-size: 0.85rem;
+    padding: 0.5rem 1.25rem;
+    border-radius: 20px;
+    text-transform: uppercase;
+    transition: all var(--transition-fast);
+}
+
+.btn-client-space:hover {
+    background: #e5e7eb;
+    transform: translateY(-2px);
+}
+
+.nav-links a:not(.btn):hover {
+    color: var(--text-main);
+}
+
+.nav-links a:not(.btn)::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--accent-primary);
+    transition: width var(--transition-smooth);
+}
+
+.nav-links a:not(.btn):hover::after {
+    width: 100%;
+}
+
+.mobile-menu-btn {
+    display: none;
+}
+
+/* ==========================================================================
+   Hero Section
+   ========================================================================== */
+.hero {
+    position: relative;
+    min-height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10rem 2rem 4rem;
+    /* Added slightly more top padding since it's not 100vh anymore */
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 4rem;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100vw;
+    height: 100%;
+    margin-left: -50vw;
+    background-color: #1F1F1E;
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+    z-index: -1;
+}
+
+.hero-content {
+    max-width: 800px;
+    text-align: left;
+    z-index: 1;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    letter-spacing: -1px;
+    line-height: 1.1;
+}
+
+.hero-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+    line-height: 1.5;
+}
+
+.hero-features-list {
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 2rem;
+    row-gap: 0.8rem;
+    margin-bottom: 3rem;
+}
+
+.hero-features-list li {
+    font-size: 0.95rem;
+    color: var(--text-main);
+    display: flex;
+    align-items: center;
+}
+
+.hero-features-list .check {
+    margin-right: 0.5rem;
+    font-weight: bold;
+}
+
+.hero-cta {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-start;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    max-width: 500px;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    mix-blend-mode: screen;
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    border-top: var(--glass-border);
+    padding-top: 3rem;
+    margin-top: 2rem;
+}
+
+.stat-item h3 {
+    font-size: 2.5rem;
+    color: var(--text-main);
+    margin-bottom: 0.5rem;
+}
+
+.stat-item p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ==========================================================================
+   Features Section
+   ========================================================================== */
+.features {
+    padding: 6rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.features::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100vw;
+    height: 100%;
+    margin-left: -50vw;
+    background-color: #1F1F1E;
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+    z-index: -1;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section-label {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.section-header p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+}
+
+.features-container {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    /* Push the grid to the right */
+    padding-left: 35%;
+    /* Leave space for the character on the left */
+}
+
+.features-character {
+    position: absolute;
+    right: 50%;
+    /* Slide character slightly left */
+    bottom: 0;
+    height: 110%;
+    display: flex;
+    align-items: flex-end;
+    pointer-events: none;
+    /* Prevent blocking clicks */
+}
+
+.selfie-img {
+    height: 100%;
+    /* Take full height of absolute container */
+    width: auto;
+    object-fit: contain;
+    /* Softly fade the edges of the image's dark background into the section so there's no harsh box, keeping the shoes fully intact! */
+    -webkit-mask-image: radial-gradient(ellipse at 50% 40%, black 55%, transparent 75%);
+    mask-image: radial-gradient(ellipse at 50% 40%, black 55%, transparent 75%);
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.features-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    position: relative;
+    z-index: 5;
+}
+
+@media (max-width: 992px) {
+
+    .features-container,
+    .products-container {
+        flex-direction: column;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .features-character,
+    .products-character {
+        position: relative;
+        left: 0;
+        right: 0;
+        max-width: 300px;
+        margin: 0 auto 2rem auto;
+        height: auto;
+    }
+
+    .features-grid,
+    .products-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
+
+.feature-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: var(--glass-border);
+    border-radius: 16px;
+    padding: 1.5rem;
+    /* Reduced padding from 2.5rem to shrink box size */
+    transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform var(--transition-smooth);
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5), 0 0 20px var(--accent-glow);
+}
+
+.feature-card:hover::before {
+    transform: scaleX(1);
+}
+
+.feature-icon-box {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: rgba(0, 212, 255, 0.1);
+    border: 1px solid rgba(0, 212, 255, 0.3);
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    color: var(--accent-primary);
+    box-shadow: 0 4px 15px var(--accent-glow);
+}
+
+.feature-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: var(--text-main);
+}
+
+.feature-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   Products Section
+   ========================================================================== */
+.products {
+    padding: 6rem 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.products::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100vw;
+    height: 100%;
+    margin-left: -50vw;
+    background-color: #1F1F1E;
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+    z-index: -1;
+}
+
+.products-container {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    /* Push the grid to the left */
+    padding-right: 35%;
+    /* Leave space for the character on the right */
+}
+
+.products-character {
+    position: absolute;
+    right: 0;
+    /* Place on the right edge */
+    bottom: -5%;
+    /* Pull character slightly down */
+    width: 35%;
+    /* Match the padding space */
+    height: 110%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    pointer-events: none;
+    /* Prevent blocking clicks */
+}
+
+.products-character-img {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+    /* Native transparency is perfectly restored */
+}
+
+.products-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    position: relative;
+    z-index: 5;
+}
+
+.product-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: var(--glass-border);
+    border-radius: 16px;
+    padding: 1.25rem;
+    transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.product-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform var(--transition-smooth);
+}
+
+.product-card:hover::before {
+    transform: scaleX(1);
+}
+
+.product-title {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: var(--text-main);
+    font-weight: 600;
+}
+
+.product-price-box {
+    background: rgba(255, 255, 255, 0.02);
+    padding: 1rem;
+    border-radius: 6px;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.price-label {
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.price-amount {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-main);
+    display: flex;
+    align-items: baseline;
+    gap: 5px;
+}
+
+.price-period {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: var(--text-muted);
+}
+
+.product-features {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.product-features li {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.product-features .icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    color: var(--accent-primary);
+}
+
+.btn-solid-white {
+    background: #ffffff;
+    color: #000000;
+    border-radius: 6px;
+    font-weight: 600;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    transition: background var(--transition-fast);
+}
+
+.btn-solid-white:hover {
+    background: #e0e0e0;
+    color: #000000;
+    transform: none;
+    /* Override general btn hover */
+    box-shadow: none;
+}
+
+/* ==========================================================================
+   Services FAQ Section
+   ========================================================================== */
+.services-faq {
+    padding: 6rem 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.services-faq::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100vw;
+    height: 100%;
+    margin-left: -50vw;
+    background-color: #1F1F1E;
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+    z-index: -1;
+}
+
+.faq-header {
+    margin-bottom: 4rem;
+}
+
+.faq-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.faq-label .dot {
+    width: 8px;
+    height: 8px;
+    background: var(--text-muted);
+    border-radius: 50%;
+}
+
+.faq-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-main);
+}
+
+.faq-header p {
+    color: var(--text-muted);
+    font-size: 1rem;
+    max-width: 800px;
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.faq-item {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 1.5rem 2rem;
+    transition: background var(--transition-fast), border-color var(--transition-fast);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.faq-item:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.faq-question {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.faq-num {
+    font-family: monospace;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.faq-text {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-main);
+    flex-grow: 1;
+}
+
+.faq-chevron {
+    color: var(--text-muted);
+    transition: transform 0.3s ease;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, margin-top 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+}
+
+.faq-answer p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.faq-answer p strong {
+    color: var(--text-main);
+    font-weight: 600;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 200px;
+    margin-top: 1.5rem;
+    opacity: 1;
+}
+
+.faq-item.active .faq-chevron {
+    transform: rotate(180deg);
+}
+
+#general-faq {
+    padding-bottom: 1rem;
+}
+
+/* ==========================================================================
+   Footer Mascots
+   ========================================================================== */
+.footer-mascots {
+    position: relative;
+    margin-top: 0;
+    margin-bottom: 0;
+    /* Moved completely up so it doesn't overlap into the footer padding */
+    z-index: 10;
+    height: 500px;
+    /* Adjusted height so it doesn't take up too much vertical space */
+    background-color: #1F1F1E;
+    /* Matches the sections above */
+    border-top: none;
+    /* Remove border for seamless transition */
+    pointer-events: none;
+    /* Let clicks pass through to footer links */
+}
+
+/* Pseudo element holds the image so we can use blend modes perfectly */
+.footer-mascots::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('assets/sitting_mascots_transparent.png');
+    background-size: contain;
+    background-position: center calc(100% + 15px);
+    background-repeat: no-repeat;
+    border-bottom: 2px solid var(--surface-color);
+    /* The line they sit/stand on */
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+.footer {
+    background: var(--surface-color);
+    padding: 4rem 2rem 2rem;
+    margin-top: 0;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 4rem;
+    margin-bottom: 4rem;
+}
+
+.footer-brand .logo-img {
+    height: 80px;
+    /* Make the logo bigger */
+    mix-blend-mode: screen;
+    /* Removes the black background */
+}
+
+.footer-brand p {
+    color: var(--text-muted);
+    margin-top: 1rem;
+    max-width: 250px;
+}
+
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.link-group h4 {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+.link-group a {
+    display: block;
+    color: var(--text-muted);
+    margin-bottom: 0.8rem;
+    font-size: 0.95rem;
+}
+
+.link-group a:hover {
+    color: var(--text-main);
+    padding-left: 5px;
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.footer-massive-brand {
+    font-size: 16vw;
+    /* Huge text scaling with screen width */
+    font-weight: 900;
+    text-align: center;
+    line-height: 0.75;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    white-space: nowrap;
+    overflow: hidden;
+    user-select: none;
+}
+
+.footer-massive-brand span {
+    color: transparent;
+    -webkit-text-stroke: 2px rgba(0, 212, 255, 0.2);
+    display: inline-block;
+    animation: fillLetter 3s linear infinite;
+}
+
+.footer-massive-brand span:nth-child(1) {
+    animation-delay: 0.0s;
+}
+
+.footer-massive-brand span:nth-child(2) {
+    animation-delay: 0.15s;
+}
+
+.footer-massive-brand span:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.footer-massive-brand span:nth-child(4) {
+    animation-delay: 0.45s;
+}
+
+.footer-massive-brand span:nth-child(5) {
+    animation-delay: 0.6s;
+}
+
+.footer-massive-brand span:nth-child(6) {
+    animation-delay: 0.75s;
+}
+
+.footer-massive-brand span:nth-child(7) {
+    animation-delay: 0.9s;
+}
+
+.footer-massive-brand span:nth-child(8) {
+    animation-delay: 1.05s;
+}
+
+.footer-massive-brand span:nth-child(9) {
+    animation-delay: 1.2s;
+}
+
+.footer-massive-brand span:nth-child(10) {
+    animation-delay: 1.35s;
+}
+
+@keyframes fillLetter {
+
+    0%,
+    40%,
+    100% {
+        color: transparent;
+        -webkit-text-stroke: 2px rgba(0, 212, 255, 0.2);
+        text-shadow: none;
+    }
+
+    10%,
+    30% {
+        color: var(--accent-primary);
+        -webkit-text-stroke: 2px var(--accent-primary);
+        text-shadow: 0 0 25px var(--accent-glow);
+    }
+}
+
+/* ==========================================================================
+   Scroll Progress Circle
+   ========================================================================== */
+.scroll-progress-container {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    z-index: 1000;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    background: rgba(21, 24, 40, 0.8);
+    border-radius: 50%;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.scroll-progress-container.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.scroll-progress-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 212, 255, 0.2);
+}
+
+.scroll-progress-svg {
+    transform: rotate(-90deg);
+    width: 100%;
+    height: 100%;
+}
+
+.scroll-progress-bg {
+    fill: none;
+    stroke: rgba(255, 255, 255, 0.1);
+    stroke-width: 6;
+}
+
+.scroll-progress-bar {
+    fill: none;
+    stroke: var(--accent-primary);
+    stroke-width: 6;
+    stroke-dasharray: 283;
+    /* 2 * PI * 45 = 282.74 */
+    stroke-dashoffset: 283;
+    stroke-linecap: round;
+}
+
+.scroll-progress-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--text-main);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ==========================================================================
+   Responsive Design
+   ========================================================================== */
+@media (max-width: 992px) {
+    .products-grid-seamless {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .faq-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+
+    .hero-features-list {
+        grid-template-columns: 1fr;
+        justify-content: center;
+        margin: 0 auto 2rem;
+    }
+
+    .hero-features-list li {
+        justify-content: center;
+    }
+
+    .hero-cta {
+        justify-content: center;
+    }
+
+    .hero-image {
+        justify-content: center;
+    }
+
+    .hero-title {
+        font-size: 3rem;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .products-grid-seamless {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-links {
+        display: none;
+        /* Add JS later for mobile menu */
+    }
+
+    .mobile-menu-btn {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        cursor: pointer;
+    }
+
+    .mobile-menu-btn span {
+        width: 30px;
+        height: 2px;
+        background: var(--text-main);
+        transition: 0.3s;
+    }
+
+    .hero {
+        padding-top: 6rem;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-stats {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .hero-cta {
+        flex-direction: column;
+    }
+
+    .footer-links {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* ==========================================================================
+   Discord CTA
+   ========================================================================== */
+.discord-cta {
+    background-color: #1F1F1E;
+    max-width: 100%;
+    /* Changed to 100% so the background spans the whole width */
+    padding: 4rem 2rem;
+}
+
+.discord-cta-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #1C41CA;
+    border-radius: 12px;
+    padding: 3rem 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.discord-text {
+    position: relative;
+    z-index: 2;
+}
+
+.discord-text h2 {
+    font-size: 2.2rem;
+    color: #fff;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.discord-text h2 span {
+    color: #8CA0FF;
+}
+
+.discord-sub {
+    font-size: 1.1rem;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.discord-desc {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.discord-button-container {
+    position: relative;
+    z-index: 2;
+}
+
+.btn-discord {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: transparent;
+    color: #fff;
+    padding: 0.8rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.btn-discord:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+.btn-discord-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.btn-discord-small {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.btn-discord-large {
+    font-size: 1.4rem;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.discord-bg-icon {
+    position: absolute;
+    color: rgba(0, 0, 0, 0.08);
+    z-index: 1;
+}
+
+.d-icon-1 {
+    top: -20px;
+    left: -10px;
+    transform: rotate(-15deg);
+}
+
+.d-icon-2 {
+    bottom: 10px;
+    left: 45%;
+    transform: rotate(10deg);
+}
+
+.d-icon-3 {
+    top: 20px;
+    right: 30%;
+    transform: rotate(25deg);
+}
+
+@media (max-width: 768px) {
+    .discord-cta-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+        padding: 2rem;
+    }
+}
+
+/* ==========================================================================
+   Global Locations
+   ========================================================================== */
+.locations-section {
+    padding: 6rem 2rem;
+    background-color: #1F1F1E;
+    text-align: center;
+}
+
+.locations-header h2 {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.locations-header h2 .highlight-blue {
+    background-color: #1C41CA;
+    padding: 0 0.5rem;
+    border-radius: 4px;
+}
+
+.locations-header p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto 4rem;
+}
+
+.locations-map-container {
+    position: relative;
+    max-width: 1200px;
+    width: 100%;
+    aspect-ratio: 2 / 1;
+    margin: 0 auto;
+    background-image: url('assets/world_map.png');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    mix-blend-mode: lighten;
+    /* Blend the background nicely */
+    opacity: 0.8;
+}
+
+.map-curves {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.map-track {
+    fill: none;
+    stroke: rgba(43, 114, 255, 0.15);
+    stroke-width: 1.5;
+    /* Removed dasharray for a solid smooth track */
+}
+
+.map-line {
+    fill: none;
+    stroke: #2B72FF;
+    stroke-width: 1.5;
+    /* Slightly thinner for multiple packets */
+    stroke-linecap: round;
+    stroke-dasharray: 2 6;
+    /* Small dashes (data packets) */
+    animation: dataStream 10s linear infinite;
+    opacity: 0.8;
+}
+
+@keyframes dataStream {
+    from {
+        stroke-dashoffset: 100;
+    }
+
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+.location-nodes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.loc-node {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    transform: translate(-50%, -50%);
+}
+
+/* Approximate positions on the map */
+.node-miami {
+    top: 52%;
+    left: 28%;
+}
+
+.node-germany {
+    top: 36%;
+    left: 52%;
+}
+
+.node-singapore {
+    top: 60%;
+    left: 77%;
+}
+
+.loc-dot {
+    width: 12px;
+    height: 12px;
+    background-color: #2B72FF;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 10px #2B72FF;
+}
+
+.loc-pulse {
+    width: 100%;
+    height: 100%;
+    background-color: #2B72FF;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.7;
+    animation: pulse 2s infinite ease-out;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.7;
+    }
+
+    100% {
+        transform: scale(3);
+        opacity: 0;
+    }
+}
+
+.locations-legend {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: transparent;
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+}
+
+.loc-flag {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.loc-name {
+    color: #fff;
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+/* ==========================================================================
+   Scroll Reveal Animations
+   ========================================================================== */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 1.5s ease-out, transform 1.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reveal-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 1.5s ease-out, transform 1.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.reveal-left.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.reveal-right {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: opacity 1.5s ease-out, transform 1.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.reveal-right.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Staggered transition delays for elements entering the screen */
+.delay-1 {
+    transition-delay: 0.3s;
+}
+
+.delay-2 {
+    transition-delay: 0.6s;
+}
+
+.delay-3 {
+    transition-delay: 0.9s;
+}
+
+.delay-4 {
+    transition-delay: 1.2s;
+}
+
+.delay-5 {
+    transition-delay: 1.5s;
+}
+
+.delay-6 {
+    transition-delay: 1.8s;
+}
+
+.delay-7 {
+    transition-delay: 2.1s;
+}

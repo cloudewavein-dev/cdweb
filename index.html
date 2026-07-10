@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloudewave | Premium Bot Hosting</title>
+    <meta name="description" content="Host your Discord and Telegram bots with Cloudewave. 24/7 uptime, robust DDoS protection, and a powerful dashboard.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="#" class="logo">
+                    <img src="assets/emoji.png" alt="Cloudewave Logo" class="logo-img">
+                </a>
+                <ul class="nav-links">
+                    <li class="dropdown">
+                        <a href="#">Bots <svg class="dropdown-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M7 10l5 5 5-5z"/></svg></a>
+                        <div class="mega-menu">
+                            <div class="mega-column">
+                                <h4 class="mega-title">DISCORD</h4>
+                                <a href="service/bot-hosting/index.html" class="mega-item">
+                                    <div class="mega-icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M12 11V7"/><path d="M8 7h8"/><path d="M9 15h.01"/><path d="M15 15h.01"/></svg>
+                                    </div>
+                                    <div class="mega-text">
+                                        <span class="mega-item-title">Bot Hosting</span>
+                                        <span class="mega-item-desc">Enterprise-grade Discord hosting</span>
+                                    </div>
+                                </a>
+                                <a href="service/premium-discord-bot-hosting/index.html" class="mega-item">
+                                    <div class="mega-icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M12 11V7"/><path d="M8 7h8"/><path d="M9 15h.01"/><path d="M15 15h.01"/></svg>
+                                    </div>
+                                    <div class="mega-text">
+                                        <span class="mega-item-title">Premium Discord Bot Hosting</span>
+                                        <span class="mega-item-desc">Budget plans from ₹39/mo</span>
+                                    </div>
+                                </a>
+                                <a href="#" class="mega-item">
+                                    <div class="mega-icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                                    </div>
+                                    <div class="mega-text">
+                                        <span class="mega-item-title">High Performance Bot Hosting</span>
+                                        <span class="mega-item-desc">EPYC 7C13 - 99.99% SLA</span>
+                                    </div>
+                                </a>
+                                <a href="#" class="mega-item">
+                                    <div class="mega-icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg>
+                                    </div>
+                                    <div class="mega-text">
+                                        <span class="mega-item-title">Free Bot Hosting</span>
+                                        <span class="mega-item-desc">24/7 online - no sleep</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="mega-column">
+                                <h4 class="mega-title">TELEGRAM</h4>
+                                <a href="#" class="mega-item">
+                                    <div class="mega-icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M12 11V7"/><path d="M8 7h8"/><path d="M9 15h.01"/><path d="M15 15h.01"/></svg>
+                                    </div>
+                                    <div class="mega-text">
+                                        <span class="mega-item-title">Telegram Bot Hosting</span>
+                                        <span class="mega-item-desc">Premium Telegram bot plans</span>
+                                    </div>
+                                </a>
+                                <a href="#" class="mega-item">
+                                    <div class="mega-icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                                    </div>
+                                    <div class="mega-text">
+                                        <span class="mega-item-title">Free Telegram Hosting</span>
+                                        <span class="mega-item-desc">Start free and scale later</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Database <svg class="dropdown-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M7 10l5 5 5-5z"/></svg></a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Lavalink <svg class="dropdown-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M7 10l5 5 5-5z"/></svg></a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Services <svg class="dropdown-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M7 10l5 5 5-5z"/></svg></a>
+                    </li>
+                    <li><a href="#">Infrastructure</a></li>
+                    <li><a href="#">Budget Slices</a></li>
+                    <li class="dropdown">
+                        <a href="#">Games <svg class="dropdown-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M7 10l5 5 5-5z"/></svg></a>
+                    </li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Knowledge Center</a></li>
+                    <li class="dropdown">
+                        <a href="#">Legal <svg class="dropdown-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M7 10l5 5 5-5z"/></svg></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="nav-actions">
+                <a href="#" class="discord-link">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"/></svg>
+                    Discord
+                </a>
+                <span class="separator">|</span>
+                <button class="theme-toggle" aria-label="Toggle theme">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                </button>
+                <span class="separator">|</span>
+                <a href="#client" class="btn btn-client-space">CLIENT SPACE</a>
+            </div>
+            <div class="mobile-menu-btn">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
+
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Discord, Telegram, Lavalink, Game,<br>VPS & Database Hosting</h1>
+            <p class="hero-subtitle">NVMe in India, USA, Singapore, and Germany. Free Discord & Telegram bots<br>24/7, DDoS on premium tiers.</p>
+            
+            <ul class="hero-features-list">
+                <li><span class="check">✓</span> 24-hour refund policy in USA regions</li>
+                <li><span class="check">✓</span> Rented dedicated hardware</li>
+                <li><span class="check">✓</span> 95%-99% UPTIME</li>
+                <li><span class="check">✓</span> 1 global location &middot; 99.95% Lavalink SLA</li>
+            </ul>
+
+            <div class="hero-cta">
+                <a href="#pricing" class="btn btn-solid-white">Get free Discord hosting &rarr;</a>
+                <a href="#features" class="btn btn-outline">View all products</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="assets/dc logo.png" alt="Discord Logo">
+        </div>
+    </header>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="section-header">
+            <span class="section-label">FEATURES</span>
+            <h2>Why Choose <span class="text-gradient">Cloudewave?</span></h2>
+            <p>Fast CPUs, NVMe, DDoS protection, and expert support on every plan.</p>
+        </div>
+        <div class="features-container">
+            <div class="features-character reveal-left delay-7">
+                <img src="assets/character_selfie.png" alt="Cloudewave Mascot taking a selfie" class="selfie-img">
+            </div>
+            <div class="features-grid">
+                <!-- Row 1 (was Row 2) -->
+                <div class="feature-card reveal delay-1">
+                    <div class="feature-icon-box">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                    </div>
+                    <h3>Global Infrastructure</h3>
+                    <p>Deploy closer to your users with rented dedicated servers in USA, India, Singapore, and Germany.</p>
+                </div>
+                <div class="feature-card reveal delay-2">
+                    <div class="feature-icon-box">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                    </div>
+                    <h3>Reliable Uptime</h3>
+                    <p>99.99% SLA across our network. We provide enterprise gear backed by our 24/7 technical support team.</p>
+                </div>
+                <div class="feature-card reveal delay-3">
+                    <div class="feature-icon-box">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                    </div>
+                    <h3>DDoS Protection</h3>
+                    <p>Enterprise-grade DDoS mitigation is automatically included on every bot, Lavalink, and game server plan.</p>
+                </div>
+                
+                <!-- Row 2 (was Row 1) -->
+                <div class="feature-card reveal delay-4">
+                    <div class="feature-icon-box">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                    </div>
+                    <h3>Lightning Fast Performance</h3>
+                    <p>Powered by the latest processors on dedicated hardware, built for demanding Discord bots and Game VPS workloads.</p>
+                </div>
+                <div class="feature-card reveal delay-5">
+                    <div class="feature-icon-box">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="12" x2="2" y2="12"></line><path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path><line x1="6" y1="16" x2="6.01" y2="16"></line><line x1="10" y1="16" x2="10.01" y2="16"></line></svg>
+                    </div>
+                    <h3>All NVMe Storage</h3>
+                    <p>NVMe SSDs on every plan guarantee blazing fast bot restarts, low-latency database queries, and seamless data access.</p>
+                </div>
+                <div class="feature-card reveal delay-6">
+                    <div class="feature-icon-box">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+                    </div>
+                    <h3>Affordable Pricing</h3>
+                    <p>Transparent pricing with top-tier performance starting at incredibly low rates, and absolutely no hidden fees.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="section-header">
+            <h2>Our Products</h2>
+            <p>Bots, Lavalink, VPS, and game servers. Pick a plan, see the price in INR.</p>
+        </div>
+        <div class="products-container">
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <div class="product-card reveal delay-1">
+                    <h3 class="product-title">Bot Hosting</h3>
+                    <div class="product-price-box">
+                        <span class="price-label">STARTING AT</span>
+                        <div class="price-amount">₹53<span class="price-period">/month</span></div>
+                    </div>
+                    <ul class="product-features">
+                        <li><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg></span> 512MB RAM entry &middot; shared vCPU tiers</li>
+                        <li><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg></span> Node.js, Python, Bun &amp; Java</li>
+                        <li><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg></span> DDR5 &amp; NVMe SSD storage</li>
+                        <li><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></span> DDoS protection on every plan</li>
+                        <li><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg></span> Premium uplinks &middot; instant deploy</li>
+                        <li><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg></span> Rented hardware &middot; no oversell</li>
+                        <li><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></span> USA, India, Singapore &amp; Germany</li>
+                        <li><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> 24/7 support</li>
+                    </ul>
+                    <a href="#" class="btn btn-solid-white btn-full">Learn More</a>
+                </div>
+                <!-- Product 2 -->
+                <div class="product-card reveal delay-2">
+                    <h3 class="product-title">Lavalink Hosting</h3>
+                    <div class="product-price-box">
+                        <span class="price-label">STARTING AT</span>
+                        <div class="price-amount">₹49<span class="price-period">/month</span></div>
+                    </div>
+                    <ul class="product-features">
+                        <li><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg></span> JVM-tuned CPU &middot; real priority per plan</li>
+                        <li><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle cx="18" cy="16" r="3"></circle></svg></span> Managed Lavalink v4 &middot; 30+ sources</li>
+                        <li><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg></span> DDR5 &amp; NVMe SSD storage</li>
+                        <li><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></span> DDoS protection on every plan</li>
+                        <li><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg></span> Premium uplinks &middot; instant deploy</li>
+                        <li><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg></span> Rented hardware &middot; no oversell</li>
+                        <li><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></span> USA, India, Singapore &amp; Germany</li>
+                        <li><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> 24/7 support</li>
+                    </ul>
+                    <a href="#" class="btn btn-solid-white btn-full">Learn More</a>
+                </div>
+                <!-- Product 3 -->
+                <div class="product-card reveal delay-3">
+                    <h3 class="product-title">VPS Hosting</h3>
+                    <div class="product-price-box">
+                        <span class="price-label">STARTING AT</span>
+                        <div class="price-amount">₹225<span class="price-period">/month</span></div>
+                    </div>
+                    <ul class="product-features">
+                        <li><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg></span> AMD Ryzen 9 &amp; EPYC processors</li>
+                        <li><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"></path></svg></span> Full root access</li>
+                        <li><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg></span> DDR5 &amp; NVMe SSD storage</li>
+                        <li><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></span> DDoS protection on every plan</li>
+                        <li><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg></span> Premium uplinks &middot; instant deploy</li>
+                        <li><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg></span> Rented hardware &middot; no oversell</li>
+                        <li><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></span> USA, India, Singapore &amp; Germany</li>
+                        <li><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> 24/7 support</li>
+                    </ul>
+                    <a href="#" class="btn btn-solid-white btn-full">Learn More</a>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="product-card reveal delay-4">
+                    <h3 class="product-title">Game Server</h3>
+                    <div class="product-price-box">
+                        <span class="price-label">STARTING AT</span>
+                        <div class="price-amount">₹60<span class="price-period">/month</span></div>
+                    </div>
+                    <ul class="product-features">
+                        <li><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg></span> Ryzen 9 9950X dedicated tiers</li>
+                        <li><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2" ry="2"></rect><path d="M6 12h4"></path><path d="M8 10v4"></path><line x1="15" y1="13" x2="15.01" y2="13"></line><line x1="18" y1="11" x2="18.01" y2="11"></line></svg></span> Minecraft, FiveM &amp; Hytale</li>
+                        <li><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg></span> DDR5 &amp; NVMe SSD storage</li>
+                        <li><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></span> DDoS protection on every plan</li>
+                        <li><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg></span> Premium uplinks &middot; instant deploy</li>
+                        <li><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg></span> Rented hardware &middot; no oversell</li>
+                        <li><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></span> USA, India, Singapore &amp; Germany</li>
+                        <li><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span> 24/7 support</li>
+                    </ul>
+                    <a href="#" class="btn btn-solid-white btn-full">Learn More</a>
+                </div>
+            </div>
+            
+            <div class="products-character reveal-right delay-5">
+                <img src="assets/products_character_logo.png" alt="Girl counting money" class="products-character-img">
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Global Locations Section -->
+    <section id="locations" class="locations-section">
+        <div class="locations-header reveal">
+            <h2><span class="highlight-blue">Global Locations</span></h2>
+            <p>Strategically positioned servers worldwide for optimal performance and minimal latency</p>
+        </div>
+        <div class="locations-map-container reveal">
+            
+            <svg class="map-curves" viewBox="0 0 100 100" preserveAspectRatio="none">
+                <!-- Curve: Miami to Germany -->
+                <path class="map-track" d="M 28,52 Q 40,35 52,36" />
+                <path class="map-line" style="animation-delay: 0s;" d="M 28,52 Q 40,35 52,36" />
+                
+                <!-- Curve: Germany to Singapore -->
+                <path class="map-track" d="M 52,36 Q 65,55 77,60" />
+                <path class="map-line" style="animation-delay: 1.5s;" d="M 52,36 Q 65,55 77,60" />
+            </svg>
+
+            <!-- Nodes over the map -->
+            <div class="location-nodes">
+                <!-- Node 1: Miami -->
+                <div class="loc-node node-miami">
+                    <div class="loc-pulse"></div>
+                    <div class="loc-dot"></div>
+                </div>
+                <!-- Node 2: Germany -->
+                <div class="loc-node node-germany">
+                    <div class="loc-pulse"></div>
+                    <div class="loc-dot"></div>
+                </div>
+                <!-- Node 3: Singapore -->
+                <div class="loc-node node-singapore">
+                    <div class="loc-pulse"></div>
+                    <div class="loc-dot"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="locations-legend reveal">
+            <div class="legend-item">
+                <img src="https://flagcdn.com/w40/us.png" alt="USA Flag" class="loc-flag">
+                <span class="loc-name">Miami, USA</span>
+            </div>
+            <div class="legend-item">
+                <img src="https://flagcdn.com/w40/de.png" alt="Germany Flag" class="loc-flag">
+                <span class="loc-name">FRANKFURT</span>
+            </div>
+            <div class="legend-item">
+                <img src="https://flagcdn.com/w40/sg.png" alt="Singapore Flag" class="loc-flag">
+                <span class="loc-name">Singapore</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ / Hosting Services Section -->
+    <section id="services-faq" class="services-faq">
+        <div class="faq-header">
+            <span class="faq-label"><span class="dot"></span> HOSTING</span>
+            <h2>Hosting services</h2>
+            <p>Discord &amp; Telegram bots, Lavalink v4, Minecraft, FiveM, Hytale, Ryzen VPS, databases, and DDoS, rented servers in USA, India, Singapore &amp; Germany.</p>
+        </div>
+        
+        <div class="faq-grid">
+            <!-- Item 1 -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="faq-num">01</span>
+                    <span class="faq-text">What hosting services does Cloudewave offer?</span>
+                    <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </div>
+                <div class="faq-answer">
+                    <p>Cloudewave is production hosting for developers who run <strong>free Discord bot hosting</strong>, <strong>Lavalink hosting</strong>, <strong>Minecraft server hosting</strong>, <strong>FiveM hosting</strong>, <strong>Hytale hosting</strong>, <strong>Telegram bot hosting</strong>, <strong>Ryzen 9 VPS in India</strong> (DDoS protected), <strong>Singapore VPS</strong>, <strong>managed databases</strong>, and <strong>DDoS-protected</strong> workloads on rented servers, from ₹49/mo Lavalink and ₹52/mo premium Discord, plus forever-free bot tiers.<br><br>Multi-region nodes in USA, India (Mumbai), Singapore, and Germany. Proprietary panel plugins, no overselling, premium ISP uplinks.<br>Managed Lavalink: 99.95% monthly network uptime guarantee; paid Discord/Telegram: 99.5%+ SLA, see our <strong>SLA</strong>.</p>
+                </div>
+            </div>
+            <!-- Item 2 -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="faq-num">02</span>
+                    <span class="faq-text">Discord, Telegram, and Lavalink hosting</span>
+                    <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </div>
+                <div class="faq-answer">
+                    <p>Our bot hosting supports all major languages (Node.js, Python, Java) with instant deployment. Lavalink nodes are JVM-tuned for minimal latency and support 30+ audio sources out of the box.</p>
+                </div>
+            </div>
+            <!-- Item 3 -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="faq-num">03</span>
+                    <span class="faq-text">Managed databases and DDoS protection</span>
+                    <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </div>
+                <div class="faq-answer">
+                    <p>Keep your data safe with our managed databases and automated backups. Every single plan on our network includes enterprise-grade DDoS mitigation by default.</p>
+                </div>
+            </div>
+            <!-- Item 4 -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="faq-num">04</span>
+                    <span class="faq-text">Free Discord and Telegram hosting plans</span>
+                    <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </div>
+                <div class="faq-answer">
+                    <p>We offer a generous free tier for developers looking to test their bots or run small community projects without any upfront cost, featuring 24/7 uptime.</p>
+                </div>
+            </div>
+            <!-- Item 5 -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="faq-num">05</span>
+                    <span class="faq-text">Why choose Cloudewave over other hosts?</span>
+                    <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </div>
+                <div class="faq-answer">
+                    <p>We own and manage our own rented dedicated infrastructure. We never oversell resources, guarantee transparent INR pricing, and provide unmatched customer service.</p>
+                </div>
+            </div>
+            <!-- Item 6 -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="faq-num">06</span>
+                    <span class="faq-text">24/7 customer support channels</span>
+                    <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </div>
+                <div class="faq-answer">
+                    <p>Our dedicated support team is available around the clock via Discord tickets and billing portal to assist with any technical issues, migrations, or setup questions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- General FAQ Section -->
+    <section id="general-faq" class="services-faq">
+        <div class="faq-header">
+            <span class="faq-label"><span class="dot"></span> FAQ</span>
+            <h2>Frequently asked questions</h2>
+            <p>Production hosting on rented dedicated hardware, bots, Lavalink, games, and VPS (2026).</p>
+        </div>
+        
+        <div class="faq-grid">
+            <!-- Item 1 -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="faq-num">01</span>
+                    <span class="faq-text">What is the best hosting option on Cloudewave in 2026?</span>
+                    <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </div>
+                <div class="faq-answer">
+                    <p>It depends on your needs! For community bots, our Node.js and Python bot hosting is perfect. For music bots, Lavalink is the way to go. For full control and game servers, choose our dedicated Ryzen VPS tiers.</p>
+                </div>
+            </div>
+            <!-- Item 2 -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="faq-num">02</span>
+                    <span class="faq-text">How much does Cloudewave hosting cost?</span>
+                    <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </div>
+                <div class="faq-answer">
+                    <p>Our premium paid plans start as low as ₹49/month for Lavalink and ₹53/month for Bot Hosting. VPS plans begin at ₹225/month. We also offer forever-free tiers for small bot projects.</p>
+                </div>
+            </div>
+            <!-- Item 3 -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="faq-num">03</span>
+                    <span class="faq-text">Which regions can I deploy in?</span>
+                    <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </div>
+                <div class="faq-answer">
+                    <p>We operate multi-region nodes to ensure low latency globally. You can deploy instances in the USA, India (Mumbai), Singapore, and Germany.</p>
+                </div>
+            </div>
+            <!-- Item 4 -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="faq-num">04</span>
+                    <span class="faq-text">Is there a free tier or trial available?</span>
+                    <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes, we offer a generous forever-free tier specifically designed for developers looking to host lightweight Discord and Telegram bots at zero cost.</p>
+                </div>
+            </div>
+            <!-- Item 5 -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="faq-num">05</span>
+                    <span class="faq-text">What uptime SLA is included?</span>
+                    <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </div>
+                <div class="faq-answer">
+                    <p>We provide a 99.95% monthly network uptime guarantee for Managed Lavalink, and a 99.5%+ SLA for paid Discord/Telegram bot hosting plans.</p>
+                </div>
+            </div>
+            <!-- Item 6 -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="faq-num">06</span>
+                    <span class="faq-text">Is DDoS protection included?</span>
+                    <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </div>
+                <div class="faq-answer">
+                    <p>Absolutely. Every single plan on our network, from free bots to dedicated game servers, is protected by robust enterprise-grade DDoS mitigation.</p>
+                </div>
+            </div>
+            <!-- Item 7 -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="faq-num">07</span>
+                    <span class="faq-text">Does Cloudewave include a control panel?</span>
+                    <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes, all game server, bot, and Lavalink hosting services come with our custom-built, proprietary control panel featuring exclusive plugins and an easy-to-use interface.</p>
+                </div>
+            </div>
+            <!-- Item 8 -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="faq-num">08</span>
+                    <span class="faq-text">How do I get started?</span>
+                    <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </div>
+                <div class="faq-answer">
+                    <p>Simply navigate to our billing portal, choose the plan that suits your needs, and enjoy instant deployment. Join our Discord for any pre-sales questions!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Discord CTA -->
+    <section class="discord-cta">
+        <div class="discord-cta-container reveal">
+            <div class="discord-text">
+                <h2>Join Our <span>Discord</span></h2>
+                <p class="discord-sub">Connect with our community of gamers and developers</p>
+                <p class="discord-desc">Get instant support, share experiences, and stay updated with the latest news</p>
+            </div>
+            <div class="discord-button-container">
+                <a href="#" class="btn-discord">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"/>
+                    </svg>
+                    <div class="btn-discord-text">
+                        <span class="btn-discord-small">JOIN US ON</span>
+                        <span class="btn-discord-large">DISCORD</span>
+                    </div>
+                </a>
+            </div>
+            <!-- Background Discord icons -->
+            <svg class="discord-bg-icon d-icon-1" xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"/>
+            </svg>
+            <svg class="discord-bg-icon d-icon-2" xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"/>
+            </svg>
+            <svg class="discord-bg-icon d-icon-3" xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Mascots -->
+    <div class="footer-mascots"></div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <a href="#" class="logo">
+                    <img src="assets/emoji.png" alt="Cloudewave Logo" class="logo-img">
+                </a>
+                <p>Premium hosting solutions for developers.</p>
+            </div>
+            <div class="footer-links">
+                <div class="link-group">
+                    <h4>Product</h4>
+                    <a href="#features">Features</a>
+                    <a href="#pricing">Pricing</a>
+                    <a href="#">API</a>
+                </div>
+                <div class="link-group">
+                    <h4>Support</h4>
+                    <a href="#">Discord Server</a>
+                    <a href="#">Documentation</a>
+                    <a href="#">Contact Us</a>
+                </div>
+                <div class="link-group">
+                    <h4>Legal</h4>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-massive-brand">
+            <span>C</span><span>l</span><span>o</span><span>u</span><span>d</span><span>e</span><span>w</span><span>a</span><span>v</span><span>e</span>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Cloudewave. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top with Progress -->
+    <div class="scroll-progress-container" id="progress-circle">
+        <svg class="scroll-progress-svg" width="50" height="50" viewBox="0 0 100 100">
+            <circle class="scroll-progress-bg" cx="50" cy="50" r="45"></circle>
+            <circle class="scroll-progress-bar" id="progress-bar" cx="50" cy="50" r="45"></circle>
+        </svg>
+        <div class="scroll-progress-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+        </div>
+    </div>
+
+    <!-- Custom Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
