@@ -33,6 +33,107 @@
     --transition-smooth: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+[data-theme="light"] {
+    /* Color Palette - Light Theme */
+    --bg-color: #f8fafc;
+    --bg-color-rgb: 248, 250, 252;
+    --surface-color: #ffffff;
+    --surface-border: rgba(0, 0, 0, 0.08);
+
+    /* Typography */
+    --text-main: #1f2937;
+    --text-muted: #6b7280;
+
+    /* Effects */
+    --glass-bg: rgba(255, 255, 255, 0.95);
+    --glass-border: 1px solid rgba(0, 0, 0, 0.08);
+    --glass-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.05);
+}
+
+/* --- Specific Light Mode Overrides to Match Screenshots --- */
+
+/* Force Hero Section to stay dark */
+[data-theme="light"] .hero {
+    background-color: #0b0d17;
+    --text-main: #f3f4f6;
+    --text-muted: #9ca3af;
+}
+
+/* Force features background to be light */
+[data-theme="light"] .features::before {
+    background-color: var(--bg-color);
+}
+
+/* Ensure cards look clean with subtle borders in light mode */
+[data-theme="light"] .feature-card,
+[data-theme="light"] .product-card,
+[data-theme="light"] .pricing-card {
+    background-color: var(--surface-color);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+}
+
+/* Force other dark sections to be light */
+[data-theme="light"] .products,
+[data-theme="light"] .products::before,
+[data-theme="light"] .locations-section,
+[data-theme="light"] .discord-cta,
+[data-theme="light"] .services-faq,
+[data-theme="light"] .footer-mascots {
+    background-color: var(--bg-color);
+}
+
+[data-theme="light"] .footer-mascots::before {
+    mix-blend-mode: multiply;
+}
+
+[data-theme="light"] .services-faq::before {
+    background-color: var(--bg-color);
+}
+
+[data-theme="light"] .accordion-item,
+[data-theme="light"] .faq-item {
+    background-color: var(--surface-color);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .locations-header h2,
+[data-theme="light"] .discord-content h2,
+[data-theme="light"] .accordion-header h3,
+[data-theme="light"] .faq-question,
+[data-theme="light"] .section-header h2 {
+    color: var(--text-main);
+}
+
+[data-theme="light"] .discord-sub,
+[data-theme="light"] .discord-desc,
+[data-theme="light"] .section-header p {
+    color: var(--text-muted);
+}
+
+/* Force Footer to stay dark in light mode */
+[data-theme="light"] .footer {
+    background-color: #151828;
+    --surface-color: #151828;
+    --text-main: #f3f4f6;
+    --text-muted: #9ca3af;
+    color: var(--text-main);
+}
+
+/* Fix Global Locations Map blending in light mode */
+[data-theme="light"] .locations-map-container::before {
+    mix-blend-mode: normal;
+    filter: invert(1) grayscale(1) opacity(1);
+}
+
+[data-theme="light"] .loc-name {
+    color: var(--text-main);
+}
+
+[data-theme="light"] .mega-title {
+    color: var(--text-muted);
+}
+
 /* ==========================================================================
    Global Reset & Base Styles
    ========================================================================== */
@@ -44,6 +145,33 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+/* Custom Scrollbar to remove the ugly default "side scroller" */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+/* For Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.15) var(--bg-color);
 }
 
 body {
@@ -52,6 +180,8 @@ body {
     color: var(--text-main);
     line-height: 1.6;
     overflow-x: hidden;
+    width: 100%;
+    position: relative;
 }
 
 h1,
@@ -203,7 +333,8 @@ ul {
     margin-bottom: -1rem; /* Counteract padding so layout doesn't break */
 }
 
-.dropdown:hover .dropdown-icon {
+.dropdown:hover .dropdown-icon,
+.dropdown.active .dropdown-icon {
     transform: rotate(180deg);
 }
 
@@ -223,7 +354,8 @@ ul {
 }
 
 /* Ensure other links don't inherit mega menu a tag styles */
-.dropdown:hover .mega-menu {
+.dropdown:hover .mega-menu,
+.dropdown.active .mega-menu {
     display: flex;
 }
 
@@ -243,6 +375,14 @@ ul {
     padding-bottom: 0.5rem;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Hide accordion carets on desktop since columns are always open */
+.mega-title .dropdown-icon {
+    display: none;
 }
 
 .mega-item {
@@ -1513,13 +1653,23 @@ ul {
     width: 100%;
     aspect-ratio: 2 / 1;
     margin: 0 auto;
+}
+
+.locations-map-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-image: url('assets/world_map.png');
     background-size: 100% 100%;
     background-position: center;
     background-repeat: no-repeat;
     mix-blend-mode: lighten;
-    /* Blend the background nicely */
     opacity: 0.8;
+    pointer-events: none;
+    z-index: 0;
 }
 
 .map-curves {
@@ -1724,3 +1874,338 @@ ul {
 .delay-7 {
     transition-delay: 2.1s;
 }
+
+/* --- Mobile Menu Button & Responsive Design --- */
+.mobile-menu-btn {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 1000;
+}
+
+.mobile-menu-btn span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 992px) {
+    /* Navigation (Default Mobile state) */
+    .nav-links, .nav-actions {
+        display: none;
+    }
+    .mobile-menu-btn {
+        display: flex;
+    }
+    .nav-container {
+        justify-content: space-between;
+        align-items: center;
+    }
+    .nav-left {
+        width: auto;
+    }
+    
+    /* Navigation (Open Mobile Menu State) */
+    .navbar.menu-open {
+        height: auto;
+        max-height: 85vh;
+        background: #181920 !important;
+        align-items: flex-start;
+        border-bottom-left-radius: 16px;
+        border-bottom-right-radius: 16px;
+        box-shadow: 0 15px 50px rgba(0,0,0,0.8);
+        border: 1px solid rgba(255,255,255,0.05);
+        border-top: none;
+    }
+    
+    .navbar.menu-open .nav-container {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        height: auto;
+        width: 100%;
+        padding-bottom: 1.5rem;
+    }
+    
+    .navbar.menu-open .nav-left {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .navbar.menu-open .mobile-menu-btn {
+        position: absolute;
+        top: 1.5rem;
+        right: 3rem;
+    }
+    
+    /* Transform hamburger into X */
+    .navbar.menu-open .mobile-menu-btn span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 6px);
+    }
+    .navbar.menu-open .mobile-menu-btn span:nth-child(2) {
+        opacity: 0;
+    }
+    .navbar.menu-open .mobile-menu-btn span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -6px);
+    }
+    
+    /* The links list inside full-screen menu */
+    .navbar.menu-open .nav-links {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 1.5rem;
+        margin-top: 1rem;
+        overflow-y: auto;
+        max-height: calc(85vh - 200px);
+        align-items: flex-start;
+        padding-right: 1rem; /* Space for scrollbar */
+        
+        /* Hide scrollbar for this container */
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+    
+    .navbar.menu-open .nav-links::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .navbar.menu-open .nav-links a:not(.btn) {
+        font-size: 1.1rem;
+        font-weight: 500;
+        width: 100%;
+        justify-content: flex-start;
+        gap: 0.5rem;
+        color: #f3f4f6;
+    }
+    
+    /* The actions (Discord, Toggle, Client Space) at the bottom */
+    .navbar.menu-open .nav-actions {
+        display: flex;
+        position: relative;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+        padding-top: 1.5rem;
+        margin-top: 1rem;
+        background: transparent;
+        border-top: 1px solid rgba(255,255,255,0.05);
+    }
+
+    /* Hero Section */
+    .hero {
+        flex-direction: column;
+        padding: 6rem 1rem 3rem;
+        text-align: center;
+        gap: 2rem;
+    }
+    .hero-content {
+        text-align: center;
+        margin: 0 auto;
+    }
+    .hero-title {
+        font-size: 2.2rem;
+    }
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    .hero-features-list {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: center;
+    }
+    .hero-cta {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 1rem;
+    }
+    .hero-cta .btn {
+        width: 100%;
+        text-align: center;
+    }
+    .hero-image {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+    .hero-stats {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    /* Generic containers & Layout stacking */
+    .features-container {
+        flex-direction: column;
+    }
+    .products-container {
+        padding-right: 0; /* Remove right padding reserved for desktop mascot */
+    }
+    .features-character, .products-character {
+        display: none !important; /* Hide mascots on mobile to save space */
+    }
+    .features-grid, .nodes-grid, .pricing-grid, .services-grid, .community-grid, .footer-container, .products-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        display: grid;
+    }
+    
+    /* Footer */
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-col {
+        margin-bottom: 1rem;
+        align-items: center;
+    }
+    .footer-massive-brand {
+        font-size: 9.5vw; /* Make text fit on mobile without clipping awkwardly */
+        padding-top: 1rem;
+        margin-top: 1rem;
+    }
+    
+    /* Scroll Progress */
+    .scroll-progress-container {
+        right: 15px;
+        bottom: 15px;
+        width: 40px;
+        height: 40px;
+    }
+    .scroll-progress-icon {
+        transform: translate(-50%, -50%) scale(0.8);
+    }
+    
+    /* Banners & Cards */
+    .discord-banner, .feature-card, .product-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem;
+    }
+    
+    .product-features {
+        text-align: left;
+    }
+    
+    .discord-button-container {
+        margin-top: 1.5rem;
+    }
+    
+    /* Mega Menu Mobile Nested Accordion */
+    .dropdown {
+        width: 100%;
+    }
+    
+    .mega-menu {
+        position: static;
+        min-width: 100%;
+        width: 100%;
+        box-shadow: none;
+        padding: 0;
+        background: transparent;
+        border: none;
+        flex-direction: column;
+        gap: 0;
+        margin-top: 1rem;
+    }
+    
+    .mega-column {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+    
+    .mega-title {
+        cursor: pointer;
+        font-size: 1.1rem;
+        color: #e5e7eb;
+        text-transform: capitalize;
+        border-bottom: none;
+        padding: 0.75rem 1rem;
+        margin-bottom: 0;
+        border-radius: 8px;
+        justify-content: flex-start;
+        gap: 0.5rem;
+    }
+    
+    .mega-title:hover {
+        background: rgba(255,255,255,0.03);
+    }
+    
+    .mega-title .dropdown-icon {
+        display: block;
+        width: 16px;
+        height: 16px;
+        transition: transform 0.3s ease;
+    }
+    
+    .mega-item {
+        padding: 0.4rem 1rem 0.4rem 2.5rem; /* Indent sub-items more, compact vertical padding */
+        display: none !important; /* Hidden by default on mobile */
+        border-bottom: none; /* Removed separator line */
+    }
+    
+    /* Hide descriptions on mobile to make it clean like a tree menu */
+    .mega-item-desc {
+        display: none;
+    }
+    
+    .mega-column.active .mega-item {
+        display: flex !important;
+    }
+    
+    .mega-column.active .mega-title .dropdown-icon {
+        transform: rotate(180deg);
+    }
+    
+    /* Disable hover-to-open on mobile layouts so click-to-close works perfectly */
+    .dropdown:hover .mega-menu {
+        display: none;
+    }
+    
+    .dropdown.active .mega-menu {
+        display: flex;
+    }
+    
+    .dropdown:hover .dropdown-icon {
+        transform: none;
+    }
+    
+    .dropdown.active .dropdown-icon {
+        transform: rotate(180deg);
+    }
+    
+    /* Map & Hero images */
+    .node-map {
+        flex-direction: column;
+    }
+    .map-image {
+        display: none !important;
+    }
+    .hero-image {
+        display: none !important;
+    }
+    img:not(.logo-img):not(.footer-img) {
+        /* Assuming there might be other images, we can hide them, but it's safer to just hide the containers we know about */
+    }
+    
+    .section-title, .section-header h2 {
+        font-size: 1.8rem;
+    }
+    
+    /* Disable animation delays and speed up transitions on mobile */
+    .reveal, .reveal-left, .reveal-right, 
+    .delay-1, .delay-2, .delay-3, .delay-4, .delay-5, .delay-6, .delay-7 {
+        transition-delay: 0s !important;
+        transition-duration: 0.4s !important;
+    }
+}
+
+/* Need a special rule to override the inline JS none!important if necessary, 
+   but JS sets inline styles which override CSS !important sometimes, 
+   actually it's better not to use !important if we want JS to override it easily */
