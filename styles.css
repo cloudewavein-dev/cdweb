@@ -320,6 +320,44 @@ ul {
     gap: 0.25rem;
 }
 
+.nav-links a.active {
+    background: #171b2d;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 0.4rem 1rem;
+    border-radius: 8px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.profile-dropdown {
+    position: relative;
+}
+
+.profile-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #e5e7eb;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: all var(--transition-fast);
+}
+
+.profile-btn:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.profile-btn svg:first-child {
+    color: #5865F2; /* Discord color */
+}
+
+
 .dropdown-icon {
     width: 16px;
     height: 16px;
@@ -2146,7 +2184,7 @@ ul {
     
     .mega-item {
         padding: 0.4rem 1rem 0.4rem 2.5rem; /* Indent sub-items more, compact vertical padding */
-        display: none !important; /* Hidden by default on mobile */
+        display: flex !important; /* Make visible by default on mobile for simple dropdowns */
         border-bottom: none; /* Removed separator line */
     }
     
@@ -2209,3 +2247,103 @@ ul {
 /* Need a special rule to override the inline JS none!important if necessary, 
    but JS sets inline styles which override CSS !important sometimes, 
    actually it's better not to use !important if we want JS to override it easily */
+
+/* ==========================================================================
+   Legal Pages Styling
+   ========================================================================== */
+.legal-page {
+    padding-top: 100px; /* offset for fixed navbar */
+    min-height: 80vh;
+    background: radial-gradient(circle at 50% 0%, rgba(0, 212, 255, 0.1) 0%, rgba(11, 13, 23, 1) 40%);
+}
+
+.legal-hero {
+    text-align: center;
+    padding: 60px 20px 40px;
+}
+
+.legal-title {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    letter-spacing: -1px;
+}
+
+.legal-date {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+}
+
+.legal-container {
+    max-width: 900px;
+    margin: 0 auto 100px;
+    padding: 0 20px;
+}
+
+.legal-content {
+    background: var(--surface-color);
+    border: var(--glass-border);
+    border-radius: 20px;
+    padding: 50px;
+    box-shadow: var(--glass-shadow);
+}
+
+.legal-content h2 {
+    font-size: 1.8rem;
+    color: var(--text-main);
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding-bottom: 0.5rem;
+}
+
+.legal-content h2:first-of-type {
+    margin-top: 0;
+}
+
+.legal-content p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.legal-content ul {
+    list-style-type: disc;
+    margin-left: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.legal-content li {
+    margin-bottom: 0.5rem;
+}
+
+.legal-contact {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.legal-contact h3 {
+    font-size: 1.5rem;
+    color: var(--text-main);
+    margin-bottom: 1rem;
+}
+
+.legal-contact a {
+    color: var(--accent-primary);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.legal-contact a:hover {
+    color: var(--accent-secondary);
+}
+
+/* Light mode overrides for legal page */
+[data-theme="light"] .legal-page {
+    background: radial-gradient(circle at 50% 0%, rgba(0, 86, 224, 0.05) 0%, var(--bg-color) 40%);
+}
