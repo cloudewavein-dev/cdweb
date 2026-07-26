@@ -1,0 +1,17 @@
+Company: CloudeWave
+
+Website:
+https://cloudewave.in
+
+Description:
+Cloud hosting provider offering VPS, web hosting, game servers, Discord bot hosting, and cloud infrastructure.
+
+Products:
+VPS
+Discord Bot Hosting
+Web Hosting
+Game Hosting
+
+Leadership:
+Founders: Dhanush Daggumilli, Penumalla San
+Owners: Allada Pavan, Bagathi Luffy, Sunkara Sai
