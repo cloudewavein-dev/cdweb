@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
     
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="styles.css?v=2.0">
+    <link rel="stylesheet" href="styles.css?v=2.6">
     
     <!-- Theme Initializer (Prevents Flash) -->
     <script>
@@ -32,7 +32,7 @@
                 <ul class="nav-links">
                     <li><a href="#">Games</a></li>
                     <li><a href="#">Dedicated</a></li>
-                    <li><a href="vps">VPS</a></li>
+                    <li><a href="vps/index.html">VPS</a></li>
                     <li><a href="#" class="active">Free Servers</a></li>
                     <li><a href="#">Discord Bots</a></li>
                     <li><a href="#">DDoS</a></li>
@@ -267,33 +267,54 @@
         <div class="locations-map-container reveal">
             
             <svg class="map-curves" viewBox="0 0 100 100" preserveAspectRatio="none">
-                <!-- Curve: Miami to Germany -->
-                <path class="map-track" d="M 28,52 Q 40,35 52,36" />
-                <path class="map-line" style="animation-delay: 0s;" d="M 28,52 Q 40,35 52,36" />
+                <!-- Curve 1: Miami to Frankfurt -->
+                <path class="map-line line-1" pathLength="100" d="M 28,40.5 Q 39,26 51.3,27" />
                 
-                <!-- Curve: Germany to Singapore -->
-                <path class="map-track" d="M 52,36 Q 65,55 77,60" />
-                <path class="map-line" style="animation-delay: 1.5s;" d="M 52,36 Q 65,55 77,60" />
+                <!-- Curve 2: Frankfurt to Mumbai -->
+                <path class="map-line line-2" pathLength="100" d="M 51.3,27 Q 58,35 66,44" />
+
+                <!-- Curve 3: Mumbai to Singapore -->
+                <path class="map-line line-3" pathLength="100" d="M 66,44 Q 69,48 72.5,52.5" />
+
+                <!-- Curve 4: Singapore to Miami -->
+                <path class="map-line line-4" pathLength="100" d="M 72.5,52.5 Q 50,65 28,40.5" />
             </svg>
 
             <!-- Nodes over the map -->
             <div class="location-nodes">
-                <!-- Node 1: Miami -->
                 <div class="loc-node node-miami">
-                    <div class="loc-pulse"></div>
                     <div class="loc-dot"></div>
+                    <div class="loc-pulse"></div>
+                    <div class="loc-tooltip">
+                        <strong>Miami, USA</strong>
+                        <span>Avg Ping: ~15ms</span>
+                    </div>
                 </div>
-                <!-- Node 2: Germany -->
                 <div class="loc-node node-germany">
-                    <div class="loc-pulse"></div>
                     <div class="loc-dot"></div>
+                    <div class="loc-pulse"></div>
+                    <div class="loc-tooltip">
+                        <strong>Frankfurt</strong>
+                        <span>Avg Ping: ~12ms</span>
+                    </div>
                 </div>
-                <!-- Node 3: Singapore -->
                 <div class="loc-node node-singapore">
-                    <div class="loc-pulse"></div>
                     <div class="loc-dot"></div>
+                    <div class="loc-pulse"></div>
+                    <div class="loc-tooltip">
+                        <strong>Singapore</strong>
+                        <span>Avg Ping: ~14ms</span>
+                    </div>
                 </div>
-            </div>
+                <div class="loc-node node-mumbai">
+                    <div class="loc-dot"></div>
+                    <div class="loc-pulse"></div>
+                    <div class="loc-tooltip">
+                        <strong>Mumbai, India</strong>
+                        <span>Avg Ping: ~18ms</span>
+                    </div>
+                </div>
+            </div>          
         </div>
         
         <div class="locations-legend reveal">
@@ -308,6 +329,10 @@
             <div class="legend-item">
                 <img src="https://flagcdn.com/w40/sg.png" alt="Singapore Flag" class="loc-flag">
                 <span class="loc-name">Singapore</span>
+            </div>
+            <div class="legend-item">
+                <img src="https://flagcdn.com/w40/in.png" alt="India Flag" class="loc-flag">
+                <span class="loc-name">Mumbai, India</span>
             </div>
         </div>
     </section>

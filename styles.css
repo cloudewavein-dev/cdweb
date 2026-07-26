@@ -1690,7 +1690,8 @@ ul {
     max-width: 1200px;
     width: 100%;
     aspect-ratio: 2 / 1;
-    margin: 0 auto;
+    margin: 2rem auto 5rem;
+    transform: scale(1.15);
 }
 
 .locations-map-container::before {
@@ -1700,12 +1701,11 @@ ul {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('assets/world_map.png');
+    background-image: url('assets/plain_map.svg');
     background-size: 100% 100%;
     background-position: center;
     background-repeat: no-repeat;
-    mix-blend-mode: lighten;
-    opacity: 0.8;
+    filter: invert(1) opacity(0.15);
     pointer-events: none;
     z-index: 0;
 }
@@ -1720,33 +1720,48 @@ ul {
     z-index: 1;
 }
 
-.map-track {
-    fill: none;
-    stroke: rgba(43, 114, 255, 0.15);
-    stroke-width: 1.5;
-    /* Removed dasharray for a solid smooth track */
-}
-
 .map-line {
     fill: none;
-    stroke: #2B72FF;
-    stroke-width: 1.5;
-    /* Slightly thinner for multiple packets */
+    stroke: var(--primary);
+    stroke-width: 2;
     stroke-linecap: round;
-    stroke-dasharray: 2 6;
-    /* Small dashes (data packets) */
-    animation: dataStream 10s linear infinite;
-    opacity: 0.8;
+    stroke-dasharray: 100;
+    stroke-dashoffset: 100;
 }
 
-@keyframes dataStream {
-    from {
-        stroke-dashoffset: 100;
-    }
+.line-1 { animation: drawLine1 6s infinite; }
+.line-2 { animation: drawLine2 6s infinite; }
+.line-3 { animation: drawLine3 6s infinite; }
+.line-4 { animation: drawLine4 6s infinite; }
 
-    to {
-        stroke-dashoffset: 0;
-    }
+@keyframes drawLine1 {
+    0% { stroke-dashoffset: 100; opacity: 1; }
+    12.5% { stroke-dashoffset: 0; opacity: 1; }
+    25% { stroke-dashoffset: 0; opacity: 0; }
+    100% { stroke-dashoffset: 100; opacity: 0; }
+}
+
+@keyframes drawLine2 {
+    0%, 25% { stroke-dashoffset: 100; opacity: 0; }
+    25.1% { opacity: 1; stroke-dashoffset: 100; }
+    37.5% { stroke-dashoffset: 0; opacity: 1; }
+    50% { stroke-dashoffset: 0; opacity: 0; }
+    100% { stroke-dashoffset: 100; opacity: 0; }
+}
+
+@keyframes drawLine3 {
+    0%, 50% { stroke-dashoffset: 100; opacity: 0; }
+    50.1% { opacity: 1; stroke-dashoffset: 100; }
+    62.5% { stroke-dashoffset: 0; opacity: 1; }
+    75% { stroke-dashoffset: 0; opacity: 0; }
+    100% { stroke-dashoffset: 100; opacity: 0; }
+}
+
+@keyframes drawLine4 {
+    0%, 75% { stroke-dashoffset: 100; opacity: 0; }
+    75.1% { opacity: 1; stroke-dashoffset: 100; }
+    87.5% { stroke-dashoffset: 0; opacity: 1; }
+    100% { stroke-dashoffset: 0; opacity: 0; }
 }
 
 .location-nodes {
@@ -1764,22 +1779,29 @@ ul {
     width: 16px;
     height: 16px;
     transform: translate(-50%, -50%);
+    cursor: pointer;
+    pointer-events: auto;
 }
 
-/* Approximate positions on the map */
+/* Visually adjusted positions for the new map projection */
 .node-miami {
-    top: 52%;
+    top: 40.5%;
     left: 28%;
 }
 
 .node-germany {
-    top: 36%;
-    left: 52%;
+    top: 27%;
+    left: 51.3%;
 }
 
 .node-singapore {
-    top: 60%;
-    left: 77%;
+    top: 52.5%;
+    left: 72.5%;
+}
+
+.node-mumbai {
+    top: 44%;
+    left: 66%;
 }
 
 .loc-dot {
@@ -1797,13 +1819,61 @@ ul {
 .loc-pulse {
     width: 100%;
     height: 100%;
-    background-color: #2B72FF;
+    background-color: var(--primary);
     border-radius: 50%;
     position: absolute;
     top: 0;
     left: 0;
+    animation: pingNode 2s infinite cubic-bezier(0, 0, 0.2, 1);
     opacity: 0.7;
-    animation: pulse 2s infinite ease-out;
+}
+
+.loc-tooltip {
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background: rgba(11, 13, 23, 0.3);
+    border: 1px solid rgba(43, 114, 255, 0.3);
+    padding: 8px 12px;
+    border-radius: 6px;
+    color: var(--text-light);
+    font-size: 0.85rem;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    z-index: 10;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+}
+
+.loc-tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: rgba(43, 114, 255, 0.3) transparent transparent transparent;
+}
+
+.loc-node:hover .loc-tooltip {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+.loc-tooltip strong {
+    color: var(--primary);
+    font-weight: 600;
 }
 
 @keyframes pulse {

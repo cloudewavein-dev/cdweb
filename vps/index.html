@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
     
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="../styles.css?v=2.0">
+    <link rel="stylesheet" href="../styles.css?v=2.6">
     
     <!-- Theme Initializer (Prevents Flash) -->
     <script>
@@ -32,7 +32,7 @@
                 <ul class="nav-links">
                     <li><a href="#">Games</a></li>
                     <li><a href="#">Dedicated</a></li>
-                    <li><a href="/vps">VPS</a></li>
+                    <li><a href="index.html">VPS</a></li>
                     <li><a href="#" class="active">Free Servers</a></li>
                     <li><a href="#">Discord Bots</a></li>
                     <li><a href="#">DDoS</a></li>
@@ -94,8 +94,8 @@
             </ul>
 
             <div class="hero-cta">
-                <a href="#pricing" class="btn btn-solid-white">Get free Discord hosting &rarr;</a>
-                <a href="#features" class="btn btn-outline">View all products</a>
+                <a href="#vps-plans" class="btn btn-solid-white">Get a VPS plan &rarr;</a>
+                <a href="#vps-plans" class="btn btn-outline">View VPS Plans</a>
             </div>
         </div>
         <div class="hero-image">
@@ -103,146 +103,110 @@
         </div>
     </header>
 
-    <!-- Features Section -->
-    <section id="features" class="features">
-        <div class="section-header">
-            <span class="section-label">FEATURES</span>
-            <h2>Why Choose <span class="text-gradient">Cloudewave?</span></h2>
-            <p>Fast CPUs, NVMe, DDoS protection, and expert support on every plan.</p>
-        </div>
-        <div class="features-container">
-            <div class="features-character reveal-left delay-7">
-                <img src="../assets/character_selfie.png" alt="Cloudewave Mascot taking a selfie" class="selfie-img">
-            </div>
-            <div class="features-grid">
-                <!-- Row 1 (was Row 2) -->
-                <div class="feature-card reveal delay-1">
-                    <div class="feature-icon-box">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-                    </div>
-                    <h3>Global Infrastructure</h3>
-                    <p>Deploy closer to your users with rented dedicated servers in the USA.</p>
-                </div>
-                <div class="feature-card reveal delay-2">
-                    <div class="feature-icon-box">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-                    </div>
-                    <h3>Reliable Uptime</h3>
-                    <p>99.99% SLA across our network. We provide enterprise gear backed by our 24/7 technical support team.</p>
-                </div>
-                <div class="feature-card reveal delay-3">
-                    <div class="feature-icon-box">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-                    </div>
-                    <h3>DDoS Protection</h3>
-                    <p>Enterprise-grade DDoS mitigation is automatically included on every bot, Lavalink, and game server plan.</p>
-                </div>
-                
-                <!-- Row 2 (was Row 1) -->
-                <div class="feature-card reveal delay-4">
-                    <div class="feature-icon-box">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
-                    </div>
-                    <h3>Lightning Fast Performance</h3>
-                    <p>Powered by the latest processors on dedicated hardware, built for demanding Discord bots and Game VPS workloads.</p>
-                </div>
-                <div class="feature-card reveal delay-5">
-                    <div class="feature-icon-box">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="12" x2="2" y2="12"></line><path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path><line x1="6" y1="16" x2="6.01" y2="16"></line><line x1="10" y1="16" x2="10.01" y2="16"></line></svg>
-                    </div>
-                    <h3>All NVMe Storage</h3>
-                    <p>NVMe SSDs on every plan guarantee blazing fast bot restarts, low-latency database queries, and seamless data access.</p>
-                </div>
-                <div class="feature-card reveal delay-6">
-                    <div class="feature-icon-box">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
-                    </div>
-                    <h3>Affordable Pricing</h3>
-                    <p>Transparent pricing with top-tier performance starting at incredibly low rates, and absolutely no hidden fees.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- VPS Plans Section -->
-    <section id="vps-plans" class="vps-plans" style="padding: 4rem 2rem; max-width: 900px; margin: 0 auto;">
+    <section id="vps-plans" class="vps-plans" style="padding: 4rem 2rem; max-width: 1200px; margin: 0 auto; background-color: #1F1F1E; border-radius: 16px;">
+        <style>
+            :root {
+                --bg-color: #1F1F1E;
+            }
+            #vps-plans {
+                background-color: #1F1F1E;
+            }
+        </style>
         <div class="section-header" style="text-align: center; margin-bottom: 3rem;">
             <h2>VPS <span class="highlight-blue">Plans</span></h2>
         </div>
-        <style>
-            .plans-table {
-                width: 100%;
-                border-collapse: collapse;
-                color: #ffffff;
-                text-align: center;
-                font-family: 'Inter', sans-serif;
-            }
-            .plans-table th, .plans-table td {
-                padding: 1.25rem 1rem;
-                border-bottom: 1px solid rgba(255,255,255,0.1);
-            }
-            .plans-table th {
-                font-weight: 600;
-                color: #a0aec0;
-                font-size: 0.95rem;
-            }
-            .plans-table tbody tr:hover {
-                background-color: rgba(255,255,255,0.02);
-            }
-            .plans-table td:first-child {
-                text-align: left;
-                font-weight: 700;
-            }
-        </style>
-        <div style="overflow-x: auto;">
-            <table class="plans-table">
-                <thead>
-                    <tr>
-                        <th>Plan</th>
-                        <th>Monthly Price</th>
-                        <th>CPU</th>
-                        <th>RAM</th>
-                        <th>SSD</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>STARTER</td>
-                        <td>₹49</td>
-                        <td>0.5 vCPU</td>
-                        <td>512 MB</td>
-                        <td>5 GB</td>
-                    </tr>
-                    <tr>
-                        <td>BASIC</td>
-                        <td>₹99</td>
-                        <td>1 vCPU</td>
-                        <td>1 GB</td>
-                        <td>10 GB</td>
-                    </tr>
-                    <tr>
-                        <td>STANDARD</td>
-                        <td>₹199</td>
-                        <td>2 vCPU</td>
-                        <td>2 GB</td>
-                        <td>20 GB</td>
-                    </tr>
-                    <tr>
-                        <td>PREMIUM</td>
-                        <td>₹349</td>
-                        <td>3 vCPU</td>
-                        <td>4 GB</td>
-                        <td>40 GB</td>
-                    </tr>
-                    <tr>
-                        <td>ULTIMATE</td>
-                        <td>₹599</td>
-                        <td>4 vCPU</td>
-                        <td>8 GB</td>
-                        <td>80 GB</td>
-                    </tr>
-                </tbody>
-            </table>
+        
+        <div class="products-grid">
+            <!-- Starter Plan -->
+            <div class="product-card reveal delay-1">
+                <h3 class="product-title">STARTER</h3>
+                <div class="product-price-box">
+                    <span class="price-label">STARTING AT</span>
+                    <div class="price-amount">₹49<span class="price-period">/month</span></div>
+                </div>
+                <ul class="product-features">
+                    <li><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg></span> 0.5 vCPU</li>
+                    <li><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg></span> 512 MB RAM</li>
+                    <li><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg></span> 5 GB SSD</li>
+                    <li><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg></span> DDR5</li>
+                    <li><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg></span> Ryzen 9 7950x</li>
+                    <li><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></span> Miami USA, FRANKFURT, Singapore, Mumbai india</li>
+                </ul>
+                <a href="https://billing.cloudewave.in" class="btn btn-outline btn-full">Order Now</a>
+            </div>
+
+            <!-- Basic Plan -->
+            <div class="product-card reveal delay-2">
+                <h3 class="product-title">BASIC</h3>
+                <div class="product-price-box">
+                    <span class="price-label">STARTING AT</span>
+                    <div class="price-amount">₹99<span class="price-period">/month</span></div>
+                </div>
+                <ul class="product-features">
+                    <li><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg></span> 1 vCPU</li>
+                    <li><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg></span> 1 GB RAM</li>
+                    <li><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg></span> 10 GB SSD</li>
+                    <li><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg></span> DDR5</li>
+                    <li><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg></span> Ryzen 9 7950x</li>
+                    <li><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></span> Miami USA, FRANKFURT, Singapore, Mumbai india</li>
+                </ul>
+                <a href="https://billing.cloudewave.in" class="btn btn-outline btn-full">Order Now</a>
+            </div>
+
+            <!-- Standard Plan -->
+            <div class="product-card reveal delay-3">
+                <div class="popular-badge">Most Popular</div>
+                <h3 class="product-title">STANDARD</h3>
+                <div class="product-price-box">
+                    <span class="price-label">STARTING AT</span>
+                    <div class="price-amount">₹199<span class="price-period">/month</span></div>
+                </div>
+                <ul class="product-features">
+                    <li><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg></span> 2 vCPU</li>
+                    <li><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg></span> 2 GB RAM</li>
+                    <li><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg></span> 20 GB SSD</li>
+                    <li><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg></span> DDR5</li>
+                    <li><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg></span> Ryzen 9 7950x</li>
+                    <li><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></span> Miami USA, FRANKFURT, Singapore, Mumbai india</li>
+                </ul>
+                <a href="https://billing.cloudewave.in" class="btn btn-solid-white btn-full">Order Now</a>
+            </div>
+
+            <!-- Premium Plan -->
+            <div class="product-card reveal delay-4">
+                <h3 class="product-title">PREMIUM</h3>
+                <div class="product-price-box">
+                    <span class="price-label">STARTING AT</span>
+                    <div class="price-amount">₹349<span class="price-period">/month</span></div>
+                </div>
+                <ul class="product-features">
+                    <li><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg></span> 3 vCPU</li>
+                    <li><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg></span> 4 GB RAM</li>
+                    <li><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg></span> 40 GB SSD</li>
+                    <li><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg></span> DDR5</li>
+                    <li><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg></span> Ryzen 9 7950x</li>
+                    <li><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></span> Miami USA, FRANKFURT, Singapore, Mumbai india</li>
+                </ul>
+                <a href="https://billing.cloudewave.in" class="btn btn-outline btn-full">Order Now</a>
+            </div>
+
+            <!-- Ultimate Plan -->
+            <div class="product-card reveal delay-5">
+                <h3 class="product-title">ULTIMATE</h3>
+                <div class="product-price-box">
+                    <div class="price-amount">₹599<span class="price-period">/month</span></div>
+                </div>
+                <ul class="product-features">
+                    <li><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg></span> 4 vCPU</li>
+                    <li><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg></span> 8 GB RAM</li>
+                    <li><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg></span> 80 GB SSD</li>
+                    <li><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg></span> DDR5</li>
+                    <li><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg></span> Ryzen 9 7950x</li>
+                    <li><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></span> Miami USA, FRANKFURT, Singapore, Mumbai india</li>
+                </ul>
+                <a href="https://billing.cloudewave.in" class="btn btn-outline btn-full">Order Now</a>
+            </div>
         </div>
     </section>
 
@@ -255,13 +219,17 @@
         <div class="locations-map-container reveal">
             
             <svg class="map-curves" viewBox="0 0 100 100" preserveAspectRatio="none">
-                <!-- Curve: Miami to Germany -->
-                <path class="map-track" d="M 28,52 Q 40,35 52,36" />
-                <path class="map-line" style="animation-delay: 0s;" d="M 28,52 Q 40,35 52,36" />
+                <!-- Curve 1: Miami to Frankfurt -->
+                <path class="map-line line-1" pathLength="100" d="M 28,40.5 Q 39,26 51.3,27" />
                 
-                <!-- Curve: Germany to Singapore -->
-                <path class="map-track" d="M 52,36 Q 65,55 77,60" />
-                <path class="map-line" style="animation-delay: 1.5s;" d="M 52,36 Q 65,55 77,60" />
+                <!-- Curve 2: Frankfurt to Mumbai -->
+                <path class="map-line line-2" pathLength="100" d="M 51.3,27 Q 58,35 66,44" />
+
+                <!-- Curve 3: Mumbai to Singapore -->
+                <path class="map-line line-3" pathLength="100" d="M 66,44 Q 69,48 72.5,52.5" />
+
+                <!-- Curve 4: Singapore to Miami -->
+                <path class="map-line line-4" pathLength="100" d="M 72.5,52.5 Q 50,65 28,40.5" />
             </svg>
 
             <!-- Nodes over the map -->
@@ -270,16 +238,37 @@
                 <div class="loc-node node-miami">
                     <div class="loc-pulse"></div>
                     <div class="loc-dot"></div>
+                    <div class="loc-tooltip">
+                        <strong>Miami, USA</strong>
+                        <span>Avg Ping: ~15ms</span>
+                    </div>
                 </div>
                 <!-- Node 2: Germany -->
                 <div class="loc-node node-germany">
                     <div class="loc-pulse"></div>
                     <div class="loc-dot"></div>
+                    <div class="loc-tooltip">
+                        <strong>Frankfurt</strong>
+                        <span>Avg Ping: ~12ms</span>
+                    </div>
                 </div>
                 <!-- Node 3: Singapore -->
                 <div class="loc-node node-singapore">
                     <div class="loc-pulse"></div>
                     <div class="loc-dot"></div>
+                    <div class="loc-tooltip">
+                        <strong>Singapore</strong>
+                        <span>Avg Ping: ~14ms</span>
+                    </div>
+                </div>
+                <!-- Node 4: Mumbai -->
+                <div class="loc-node node-mumbai">
+                    <div class="loc-pulse"></div>
+                    <div class="loc-dot"></div>
+                    <div class="loc-tooltip">
+                        <strong>Mumbai, India</strong>
+                        <span>Avg Ping: ~18ms</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -296,6 +285,10 @@
             <div class="legend-item">
                 <img src="https://flagcdn.com/w40/sg.png" alt="Singapore Flag" class="loc-flag">
                 <span class="loc-name">Singapore</span>
+            </div>
+            <div class="legend-item">
+                <img src="https://flagcdn.com/w40/in.png" alt="India Flag" class="loc-flag">
+                <span class="loc-name">Mumbai, India</span>
             </div>
         </div>
     </section>
@@ -566,7 +559,7 @@
     </div>
 
     <!-- Custom Scripts -->
-    <script src="script.js?v=2.0"></script>
+    <script src="../script.js?v=2.0"></script>
 </body>
 </html>
 
