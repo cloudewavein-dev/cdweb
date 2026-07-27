@@ -2821,3 +2821,12 @@ ul {
 }
 
 
+
+@media (max-width: 768px) {
+    .bento-box[style*="grid-column"] {
+        grid-column: 1 / -1 !important;
+    }
+    .bento-hero-title {
+        font-size: 2.5rem !important;
+    }
+}
