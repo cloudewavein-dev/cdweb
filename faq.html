@@ -163,65 +163,74 @@
 
 
 
-        <!-- Page Content -->
-    <section class="section animated-bg" style="margin-top: 100px; padding: 100px 20px; text-align: center; border-radius: 0 0 40px 40px; margin-bottom: 4rem;">
-        <h1 class="section-title float-anim"><span class="gradient-text">Frequently Asked Questions</span></h1>
-        <p class="section-subtitle glow-text" style="max-width: 800px; margin: 0 auto; color: white;">Everything you need to know about CloudeWave hosting services.</p>
+            <!-- Page Content -->
+    <section class="bento-hero">
+        <h1 class="bento-hero-title">Frequently Asked Questions</h1>
+        <p class="bento-hero-subtitle">Everything you need to know about CloudeWave hosting services.</p>
     </section>
 
-    <section class="section" style="max-width: 800px; margin: -80px auto 100px; padding: 0 20px; position: relative; z-index: 10;">
-        <div class="glass-card faq-glass-item">
-            <button class="faq-glass-question">
-                What makes CloudeWave different?
-                <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-            </button>
-            <div class="faq-glass-answer">
-                <p>We combine enterprise-grade NVMe infrastructure with highly competitive pricing and an unwavering commitment to 24/7 uptime. Our focus is specifically tuned for developers hosting Discord bots, Telegram bots, and game servers.</p>
+    <section class="section" style="max-width: 800px; margin: 0 auto 100px; padding: 0 20px;">
+        <div class="bento-box" style="padding: 1rem 2.5rem;">
+            
+            <div class="bento-faq-item">
+                <button class="bento-faq-question">
+                    What makes CloudeWave different?
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <div class="bento-faq-answer">
+                    <p>We combine enterprise-grade NVMe infrastructure with highly competitive pricing and an unwavering commitment to 24/7 uptime. Our focus is specifically tuned for developers hosting Discord bots, Telegram bots, and game servers.</p>
+                </div>
             </div>
-        </div>
 
-        <div class="glass-card faq-glass-item">
-            <button class="faq-glass-question">
-                Do you offer DDoS protection?
-                <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-            </button>
-            <div class="faq-glass-answer">
-                <p>Yes! All our premium tiers and VPS plans come equipped with robust, always-on DDoS mitigation to ensure your services remain accessible even during targeted attacks.</p>
+            <div class="bento-faq-item">
+                <button class="bento-faq-question">
+                    Do you offer DDoS protection?
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <div class="bento-faq-answer">
+                    <p>Yes! All our premium tiers and VPS plans come equipped with robust, always-on DDoS mitigation to ensure your services remain accessible even during targeted attacks.</p>
+                </div>
             </div>
-        </div>
 
-        <div class="glass-card faq-glass-item">
-            <button class="faq-glass-question">
-                How does the refund policy work?
-                <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-            </button>
-            <div class="faq-glass-answer">
-                <p>We offer a strict 24-hour refund policy. If you are not satisfied with your server performance within the first 24 hours of provisioning, you can request a full refund, no questions asked.</p>
+            <div class="bento-faq-item">
+                <button class="bento-faq-question">
+                    How does the refund policy work?
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <div class="bento-faq-answer">
+                    <p>We offer a strict 24-hour refund policy. If you are not satisfied with your server performance within the first 24 hours of provisioning, you can request a full refund, no questions asked.</p>
+                </div>
             </div>
-        </div>
-        
-        <div class="glass-card faq-glass-item">
-            <button class="faq-glass-question">
-                Can I upgrade my plan later?
-                <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-            </button>
-            <div class="faq-glass-answer">
-                <p>Absolutely. Our infrastructure is highly scalable. You can seamlessly upgrade from our basic tiers to higher VPS packages directly from your billing dashboard with zero downtime.</p>
+            
+            <div class="bento-faq-item" style="border-bottom: none;">
+                <button class="bento-faq-question">
+                    Can I upgrade my plan later?
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <div class="bento-faq-answer">
+                    <p>Absolutely. Our infrastructure is highly scalable. You can seamlessly upgrade from our basic tiers to higher VPS packages directly from your billing dashboard with zero downtime.</p>
+                </div>
             </div>
+
         </div>
 
         <script>
-            document.querySelectorAll('.faq-glass-question').forEach(button => {
+            document.querySelectorAll('.bento-faq-question').forEach(button => {
                 button.addEventListener('click', () => {
                     const item = button.parentElement;
                     const isActive = item.classList.contains('active');
                     
                     // Close all
-                    document.querySelectorAll('.faq-glass-item').forEach(i => i.classList.remove('active'));
+                    document.querySelectorAll('.bento-faq-item').forEach(i => {
+                        i.classList.remove('active');
+                        i.querySelector('svg').style.transform = 'rotate(0deg)';
+                        i.querySelector('svg').style.transition = 'transform 0.3s ease';
+                    });
                     
                     // Open clicked if it wasn't active
                     if (!isActive) {
                         item.classList.add('active');
+                        button.querySelector('svg').style.transform = 'rotate(180deg)';
                     }
                 });
             });
@@ -287,6 +296,7 @@
 
 </body>
 </html>
+
 
 
 

@@ -2672,3 +2672,149 @@ ul {
     padding-bottom: 1.5rem;
 }
 
+
+/* ==========================================================================
+   BENTO UI SYSTEM (NEW)
+   ========================================================================== */
+
+/* Bento Container */
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+/* Base Bento Box */
+.bento-box {
+    background: #0D0D12;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 24px;
+    padding: 2.5rem;
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+}
+
+[data-theme="light"] .bento-box {
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+}
+
+.bento-box:hover {
+    border-color: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="light"] .bento-box:hover {
+    border-color: rgba(0, 0, 0, 0.15);
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.1);
+}
+
+/* Bento Typography */
+.bento-heading {
+    color: var(--text-main);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    letter-spacing: -0.5px;
+}
+
+.bento-subtext {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.6;
+    flex: 1;
+}
+
+/* Feature Bento Specifics */
+.bento-icon {
+    width: 48px;
+    height: 48px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    color: var(--accent-primary);
+}
+
+/* Hero Section Minimal */
+.bento-hero {
+    margin-top: 80px;
+    padding: 80px 20px 40px;
+    text-align: center;
+}
+
+.bento-hero-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: var(--text-main);
+    letter-spacing: -1px;
+    margin-bottom: 1rem;
+}
+
+.bento-hero-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Leadership Avatar */
+.bento-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+    background: #1A1A24;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--text-main);
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* FAQ Minimal */
+.bento-faq-item {
+    background: transparent;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 1.5rem 0;
+}
+[data-theme="light"] .bento-faq-item {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+.bento-faq-question {
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    color: var(--text-main);
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+}
+.bento-faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, margin-top 0.3s ease;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.bento-faq-item.active .bento-faq-answer {
+    max-height: 500px;
+    margin-top: 1rem;
+}
+
