@@ -2687,6 +2687,7 @@ ul {
 
 /* Base Bento Box */
 .bento-box {
+    text-align: left;
     background: #0D0D12;
     border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: 24px;
@@ -2699,6 +2700,7 @@ ul {
 }
 
 [data-theme="light"] .bento-box {
+    text-align: left;
     background: #FFFFFF;
     border: 1px solid rgba(0, 0, 0, 0.06);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
@@ -2817,4 +2819,5 @@ ul {
     max-height: 500px;
     margin-top: 1rem;
 }
+
 
