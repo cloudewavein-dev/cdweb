@@ -2324,7 +2324,7 @@ ul {
 .legal-page {
     padding-top: 100px; /* offset for fixed navbar */
     min-height: 80vh;
-    background: radial-gradient(circle at 50% 0%, rgba(0, 212, 255, 0.1) 0%, #1F1F1E 40%);
+    background: var(--bg-color);
 }
 
 .legal-hero {
@@ -2415,7 +2415,7 @@ ul {
 
 /* Light mode overrides for legal page */
 [data-theme="light"] .legal-page {
-    background: radial-gradient(circle at 50% 0%, rgba(0, 86, 224, 0.05) 0%, var(--bg-color) 40%);
+    background: var(--bg-color);
 }
 /* ==========================================================================
    PREMIUM COMPANY PAGES UI ADDITIONS
@@ -2830,6 +2830,7 @@ ul {
         font-size: 2.5rem !important;
     }
 }
+
 
 
 
