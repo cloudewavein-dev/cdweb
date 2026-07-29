@@ -7,7 +7,7 @@
 <title>CloudeWave - Premium Cloud Hosting Platform</title>
 
 <!-- SEO and Social Meta Tags -->
-<link href="/assets/emoji.png" rel="icon" type="image/png"/>
+<link href="/assets/emoji.webp" rel="icon" type="image/png"/>
 <link href="https://cloudewave.in" rel="canonical"/>
 <link href="/manifest.webmanifest" rel="manifest"/>
 <link href="/humans.txt" rel="author"/>
@@ -24,7 +24,10 @@
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Outfit:wght@400;600;800&amp;display=swap" rel="preload"/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Outfit:wght@400;600;800&amp;display=swap" rel="stylesheet"/>
+<!-- Preloads -->
+<link as="image" href="/assets/dc logo.webp" rel="preload"/>
 <!-- Custom CSS -->
 <link href="styles.css?v=3.6" rel="stylesheet"/>
 <!-- Theme Initializer (Prevents Flash) -->
@@ -33,19 +36,73 @@
             document.documentElement.setAttribute('data-theme', 'light');
         }
     </script>
-<meta content="Premium Cloud Hosting with DDoS Protection, Instant Deployment, VPS, Discord Bot Hosting and more." name="description"/><meta content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" name="robots"/><meta content="#0F172A" name="theme-color"/><meta content="website" property="og:type"/><meta content="CloudeWave" property="og:site_name"/><meta content="CloudeWave - Premium Cloud Hosting Platform" property="og:title"/><meta content="Premium Cloud Hosting with DDoS Protection, Instant Deployment, VPS, Discord Bot Hosting and more." property="og:description"/><meta content="https://cloudewave.in" property="og:url"/><meta content="https://cloudewave.in/assets/og-image.png" property="og:image"/><meta content="https://cloudewave.in/assets/og-image.png" property="og:image:secure_url"/><meta content="1200" property="og:image:width"/><meta content="630" property="og:image:height"/><meta content="image/png" property="og:image:type"/><meta content="summary_large_image" name="twitter:card"/><meta content="https://cloudewave.in/assets/og-image.png" name="twitter:image"/><script type="application/ld+json">[
+<meta content="Premium Cloud Hosting with DDoS Protection, Instant Deployment, VPS, Discord Bot Hosting and more." name="description"/><meta content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" name="robots"/><meta content="#0F172A" name="theme-color"/><meta content="website" property="og:type"/><meta content="CloudeWave" property="og:site_name"/><meta content="CloudeWave - Premium Cloud Hosting Platform" property="og:title"/><meta content="Premium Cloud Hosting with DDoS Protection, Instant Deployment, VPS, Discord Bot Hosting and more." property="og:description"/><meta content="https://cloudewave.in" property="og:url"/><meta content="https://cloudewave.in/assets/og-image.webp" property="og:image"/><meta content="https://cloudewave.in/assets/og-image.webp" property="og:image:secure_url"/><meta content="1200" property="og:image:width"/><meta content="630" property="og:image:height"/><meta content="image/png" property="og:image:type"/><meta content="summary_large_image" name="twitter:card"/><meta content="https://cloudewave.in/assets/og-image.webp" name="twitter:image"/><script type="application/ld+json">[
   {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "CloudeWave",
     "url": "https://cloudewave.in",
-    "logo": "https://cloudewave.in/assets/logofull.png"
+    "logo": "https://cloudewave.in/assets/logofull.webp",
+    "email": "rocky@cloudewave.in",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "email": "rocky@cloudewave.in",
+      "availableLanguage": "English"
+    },
+    "sameAs": [
+      "https://discord.gg/hostnow",
+      "https://linkedin.com",
+      "https://github.com"
+    ]
   },
   {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "CloudeWave",
-    "url": "https://cloudewave.in"
+    "url": "https://cloudewave.in",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://cloudewave.in/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Premium Cloud Hosting Platform - CloudeWave",
+    "description": "Enterprise-grade bare-metal infrastructure hosted in world-class Tier III and Tier IV data centers, engineered for maximum performance, reliability, and uptime."
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "VPS Hosting",
+    "provider": {
+      "@type": "Organization",
+      "name": "CloudeWave"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What hosting services does Cloudewave offer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Cloudewave is production hosting for developers who run free Discord bot hosting, Lavalink hosting, Minecraft server hosting, FiveM hosting, Hytale hosting, Telegram bot hosting, Ryzen 9 VPS (DDoS protected), databases, and DDoS-protected workloads."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is DDoS protection included?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolutely. Every single plan on our network, from free bots to dedicated servers, is protected by robust enterprise-grade DDoS mitigation."
+        }
+      }
+    ]
   }
 ]</script></head>
 <body>
@@ -54,14 +111,14 @@
 <div class="nav-container">
 <div class="nav-left">
 <a class="logo" href="/">
-<img alt="Cloudewave Logo" class="logo-img" decoding="async" fetchpriority="high" src="/assets/emoji.png"/>
+<img alt="Cloudewave Logo" class="logo-img" decoding="async" fetchpriority="high" src="/assets/emoji.webp"/>
 </a>
 <ul class="nav-links">
-<li><a href="#">Dedicated</a></li>
+<li><a href="/dedicated/">Dedicated</a></li>
 <li><a href="/vps/">VPS</a></li>
-<li><a class="active" href="#">Free Servers</a></li>
-<li><a href="#">Discord Bots</a></li>
-<li><a href="#">DDoS</a></li>
+<li><a href="/game-hosting/">Game Hosting</a></li>
+<li><a href="/discord-bot-hosting/">Discord Bots</a></li>
+<li><a href="/database-hosting/">Databases</a></li>
 <li class="dropdown">
 <a href="#">Legal <svg class="dropdown-icon" height="16" viewbox="0 0 24 24" width="16"><path d="M7 10l5 5 5-5z" fill="currentColor"></path></svg></a>
 <div class="mega-menu" style="min-width: 220px; padding: 1rem;">
@@ -93,14 +150,13 @@
 </div>
 <div class="nav-actions">
 <div class="profile-dropdown">
-<button class="profile-btn">
+<button aria-expanded="false" aria-haspopup="true" aria-label="Profile Menu" class="profile-btn">
 <svg fill="currentColor" height="16" viewbox="0 0 24 24" width="16"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"></path></svg>
                         Discord
                         <svg class="dropdown-icon" height="16" viewbox="0 0 24 24" width="16"><path d="M7 10l5 5 5-5z" fill="currentColor"></path></svg>
 </button>
 </div>
-</div>
-<div class="mobile-menu-btn">
+<div aria-expanded="false" aria-label="Toggle Mobile Menu" class="mobile-menu-btn" role="button" tabindex="0">
 <span></span><span></span><span></span>
 </div>
 </div>
@@ -111,17 +167,17 @@
 <p class="hero-subtitle">NVMe in USA. Free Discord &amp; Telegram bots<br/>24/7, DDoS on premium tiers.</p>
 <ul class="hero-features-list">
 <li><span class="check">✓</span> 24-hour refund policy in USA regions</li>
-<li><span class="check">✓</span> Rented dedicated hardware</li>
-<li><span class="check">✓</span> 95%-99% UPTIME</li>
-<li><span class="check">✓</span> 1 global location · 99.95% Lavalink SLA</li>
+<li><span class="check">✓</span> <strong>Enterprise-grade bare-metal infrastructure hosted in world-class Tier III and Tier IV data centers, engineered for maximum performance, reliability, and uptime.</strong></li>
+<li><span class="check">✓</span> 99.9% UPTIME Guarantee</li>
+<li><span class="check">✓</span> 1 global location · Enterprise DDoS Protection</li>
 </ul>
 <div class="hero-cta">
-<a class="btn btn-solid-white" href="#pricing">Get free Discord hosting →</a>
+<a class="btn btn-solid-white" href="#pricing">Deploy Now →</a>
 <a class="btn btn-outline" href="#features">View all products</a>
 </div>
 </div>
 <div class="hero-image">
-<img alt="Discord Logo" decoding="async" loading="lazy" src="assets/dc logo.png"/>
+<img alt="Discord Logo" decoding="async" loading="lazy" src="assets/dc logo.webp"/>
 </div>
 </header>
 <!-- Features Section -->
@@ -133,7 +189,7 @@
 </div>
 <div class="features-container">
 <div class="features-character reveal-left delay-7">
-<img alt="Cloudewave Mascot taking a selfie" class="selfie-img" decoding="async" loading="lazy" src="assets/character_selfie.png"/>
+<img alt="Cloudewave Mascot taking a selfie" class="selfie-img" decoding="async" loading="lazy" src="assets/character_selfie.webp"/>
 </div>
 <div class="features-grid">
 <!-- Row 1 (was Row 2) -->
@@ -164,7 +220,7 @@
 <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
 </div>
 <h3>Lightning Fast Performance</h3>
-<p>Powered by the latest processors on dedicated hardware, built for demanding Discord bots and Game VPS workloads.</p>
+<p>Powered by the latest processors on enterprise-grade hardware, built for demanding Discord bots and Game VPS workloads.</p>
 </div>
 <div class="feature-card reveal delay-5">
 <div class="feature-icon-box">
@@ -204,7 +260,7 @@
 <li><span class="icon"><svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg></span> DDR5 &amp; NVMe SSD storage</li>
 <li><span class="icon"><svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></span> DDoS protection on every plan</li>
 <li><span class="icon"><svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg></span> Premium uplinks · instant deploy</li>
-<li><span class="icon"><svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><rect height="8" rx="2" ry="2" width="20" x="2" y="2"></rect><rect height="8" rx="2" ry="2" width="20" x="2" y="14"></rect><line x1="6" x2="6.01" y1="6" y2="6"></line><line x1="6" x2="6.01" y1="18" y2="18"></line></svg></span> Rented hardware · no oversell</li>
+<li><span class="icon"><svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><rect height="8" rx="2" ry="2" width="20" x="2" y="2"></rect><rect height="8" rx="2" ry="2" width="20" x="2" y="14"></rect><line x1="6" x2="6.01" y1="6" y2="6"></line><line x1="6" x2="6.01" y1="18" y2="18"></line></svg></span> Enterprise hardware · no oversell</li>
 <li><span class="icon"><svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10"></circle><line x1="2" x2="22" y1="12" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></span> USA</li>
 <li><span class="icon"><svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><polyline points="20 6 9 17 4 12"></polyline></svg></span> 24/7 support</li>
 </ul>
@@ -223,7 +279,7 @@
 <li><span class="icon"><svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg></span> DDR5 &amp; NVMe SSD storage</li>
 <li><span class="icon"><svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></span> DDoS protection on every plan</li>
 <li><span class="icon"><svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg></span> Premium uplinks · instant deploy</li>
-<li><span class="icon"><svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><rect height="8" rx="2" ry="2" width="20" x="2" y="2"></rect><rect height="8" rx="2" ry="2" width="20" x="2" y="14"></rect><line x1="6" x2="6.01" y1="6" y2="6"></line><line x1="6" x2="6.01" y1="18" y2="18"></line></svg></span> Rented hardware · no oversell</li>
+<li><span class="icon"><svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><rect height="8" rx="2" ry="2" width="20" x="2" y="2"></rect><rect height="8" rx="2" ry="2" width="20" x="2" y="14"></rect><line x1="6" x2="6.01" y1="6" y2="6"></line><line x1="6" x2="6.01" y1="18" y2="18"></line></svg></span> Enterprise hardware · no oversell</li>
 <li><span class="icon"><svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10"></circle><line x1="2" x2="22" y1="12" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></span> USA</li>
 <li><span class="icon"><svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><polyline points="20 6 9 17 4 12"></polyline></svg></span> 24/7 support</li>
 </ul>
@@ -242,7 +298,7 @@
 <li><span class="icon"><svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg></span> DDR5 &amp; NVMe SSD storage</li>
 <li><span class="icon"><svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></span> DDoS protection on every plan</li>
 <li><span class="icon"><svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg></span> Premium uplinks · instant deploy</li>
-<li><span class="icon"><svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><rect height="8" rx="2" ry="2" width="20" x="2" y="2"></rect><rect height="8" rx="2" ry="2" width="20" x="2" y="14"></rect><line x1="6" x2="6.01" y1="6" y2="6"></line><line x1="6" x2="6.01" y1="18" y2="18"></line></svg></span> Rented hardware · no oversell</li>
+<li><span class="icon"><svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><rect height="8" rx="2" ry="2" width="20" x="2" y="2"></rect><rect height="8" rx="2" ry="2" width="20" x="2" y="14"></rect><line x1="6" x2="6.01" y1="6" y2="6"></line><line x1="6" x2="6.01" y1="18" y2="18"></line></svg></span> Enterprise hardware · no oversell</li>
 <li><span class="icon"><svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10"></circle><line x1="2" x2="22" y1="12" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></span> USA</li>
 <li><span class="icon"><svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><polyline points="20 6 9 17 4 12"></polyline></svg></span> 24/7 support</li>
 </ul>
@@ -255,7 +311,7 @@
 <li><span class="icon"><svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg></span> DDR5 &amp; NVMe SSD storage</li>
 <li><span class="icon"><svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></span> DDoS protection on every plan</li>
 <li><span class="icon"><svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg></span> Premium uplinks · instant deploy</li>
-<li><span class="icon"><svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><rect height="8" rx="2" ry="2" width="20" x="2" y="2"></rect><rect height="8" rx="2" ry="2" width="20" x="2" y="14"></rect><line x1="6" x2="6.01" y1="6" y2="6"></line><line x1="6" x2="6.01" y1="18" y2="18"></line></svg></span> Rented hardware · no oversell</li>
+<li><span class="icon"><svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><rect height="8" rx="2" ry="2" width="20" x="2" y="2"></rect><rect height="8" rx="2" ry="2" width="20" x="2" y="14"></rect><line x1="6" x2="6.01" y1="6" y2="6"></line><line x1="6" x2="6.01" y1="18" y2="18"></line></svg></span> Enterprise hardware · no oversell</li>
 <li><span class="icon"><svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10"></circle><line x1="2" x2="22" y1="12" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></span> USA</li>
 <li><span class="icon"><svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><polyline points="20 6 9 17 4 12"></polyline></svg></span> 24/7 support</li>
 </ul>
@@ -263,7 +319,7 @@
 </div>
 </div>
 <div class="products-character reveal-right delay-5">
-<img alt="Girl counting money" class="products-character-img" decoding="async" loading="lazy" src="assets/products_character_logo.png"/>
+<img alt="Girl counting money" class="products-character-img" decoding="async" loading="lazy" src="assets/products_character_logo.webp"/>
 </div>
 </div>
 
@@ -323,19 +379,19 @@
 </div>
 <div class="locations-legend reveal">
 <div class="legend-item">
-<img alt="USA Flag" class="loc-flag" decoding="async" loading="lazy" src="https://flagcdn.com/w40/us.png"/>
+<img alt="USA Flag" class="loc-flag" decoding="async" loading="lazy" src="https://flagcdn.com/w40/us.webp"/>
 <span class="loc-name">Miami, USA</span>
 </div>
 <div class="legend-item">
-<img alt="Germany Flag" class="loc-flag" decoding="async" loading="lazy" src="https://flagcdn.com/w40/de.png"/>
+<img alt="Germany Flag" class="loc-flag" decoding="async" loading="lazy" src="https://flagcdn.com/w40/de.webp"/>
 <span class="loc-name">FRANKFURT</span>
 </div>
 <div class="legend-item">
-<img alt="Singapore Flag" class="loc-flag" decoding="async" loading="lazy" src="https://flagcdn.com/w40/sg.png"/>
+<img alt="Singapore Flag" class="loc-flag" decoding="async" loading="lazy" src="https://flagcdn.com/w40/sg.webp"/>
 <span class="loc-name">Singapore</span>
 </div>
 <div class="legend-item">
-<img alt="India Flag" class="loc-flag" decoding="async" loading="lazy" src="https://flagcdn.com/w40/in.png"/>
+<img alt="India Flag" class="loc-flag" decoding="async" loading="lazy" src="https://flagcdn.com/w40/in.webp"/>
 <span class="loc-name">Mumbai, India</span>
 </div>
 </div>
@@ -552,39 +608,44 @@
 <div class="footer-content">
 <div class="footer-brand">
 <a class="logo" href="/">
-<img alt="Cloudewave Logo" class="logo-img" decoding="async" loading="lazy" src="/assets/emoji.png"/>
+<img alt="Cloudewave Logo" class="logo-img" decoding="async" loading="lazy" src="/assets/emoji.webp"/>
 </a>
 <p>Premium hosting solutions for developers.</p>
 </div>
 <div class="footer-links">
 <div class="link-group">
-<h4>Product</h4>
-<a href="/#features">Features</a>
-<a href="/#products">Pricing</a>
-<a href="/vps/">VPS Hosting</a>
-<a href="/documentation">API</a>
-</div>
-<div class="link-group">
 <h4>Company</h4>
-<a href="/about">About Us</a>
-<a href="/company">Company Details</a>
-<a href="/leadership">Leadership</a>
-<a href="/blog">Blog</a>
-<a href="/faq">FAQ</a>
+<a href="/about.html">About CloudeWave</a>
+<a href="/contact.html">Contact Us</a>
+<a href="#">Careers</a>
+<a href="/blog.html">Blog</a>
+<a href="#">Changelog</a>
 </div>
 <div class="link-group">
 <h4>Support</h4>
-<a href="/contact">Contact Us</a>
-<a href="#">Discord Server</a>
-<a href="mailto:rocky@cloudewave.in">rocky@cloudewave.in</a>
-<a href="/documentation">Documentation</a>
+<a href="/documentation.html">Knowledge Base</a>
+<a href="/documentation.html">Documentation</a>
+<a href="/status.html">Network Status</a>
+<a href="https://discord.gg/hostnow">Discord Community</a>
+<a href="/contact.html">Support Center</a>
 </div>
 <div class="link-group">
 <h4>Legal</h4>
-<a href="/privacy-policy">Privacy Policy</a>
-<a href="/terms-of-service">Terms of Service</a>
-<a href="/refund-policy">Refund Policy</a>
-<a href="/cookie-policy">Cookie Policy</a>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms-of-service.html">Terms of Service</a>
+<a href="/acceptable-use-policy.html">Acceptable Use Policy</a>
+<a href="/refund-policy.html">Refund Policy</a>
+<a href="/sla.html">SLA</a>
+</div>
+<div class="link-group">
+<h4>Trust</h4>
+<a href="#">99.9% Uptime</a>
+<a href="#">Enterprise DDoS Protection</a>
+<a href="#">NVMe SSD Storage</a>
+<a href="#">Instant Deployment</a>
+<a href="#">24/7 Support</a>
+<a href="#">Secure Payments</a>
+<a href="#">Global Infrastructure</a>
 </div>
 </div>
 </div>
