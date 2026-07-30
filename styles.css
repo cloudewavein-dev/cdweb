@@ -2837,3 +2837,11 @@ ul {
 
 /* Accessibility Focus */
 *:focus-visible { outline: 2px solid #3b82f6; outline-offset: 2px; }
+
+/* Hide specific footer links per request */
+.footer-links .link-group:not(:nth-child(3)) {
+    display: none;
+}
+.footer-links .link-group:nth-child(3) a:not([href="/privacy-policy.html"]):not([href="/terms-of-service.html"]):not([href="/refund-policy.html"]) {
+    display: none;
+}
